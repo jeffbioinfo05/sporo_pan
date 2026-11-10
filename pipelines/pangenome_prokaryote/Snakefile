@@ -1,0 +1,28 @@
+import pandas as pd, os, glob
+
+configfile: "config.yaml"
+
+RESULTS  = config["results_dir"]
+LOGS     = config["logs_dir"]
+PROC     = config["processed_dir"]
+THREADS  = config.get("threads", 4)
+THREADS_H= config.get("threads_heavy", THREADS)
+GENOMES_DIR = config["input"]["genomes_dir"]
+GFF_DIR     = config["input"]["gff_dir"]
+
+GENOMES = [os.path.splitext(os.path.basename(f))[0]
+           for f in glob.glob(os.path.join(GENOMES_DIR, "*.fasta")) +
+                    glob.glob(os.path.join(GENOMES_DIR, "*.fna"))]
+
+for smk in ["panaroo", "orthofinder", "phylogeny", "functional", "aggregate"]:
+    include: os.path.expanduser(f"~/lab/pipelines/pangenome_prokaryote/rules/{smk}.smk")
+
+rule all:
+    input:
+        os.path.join(RESULTS, "panaroo/pan_genome_reference.fa"),
+        os.path.join(RESULTS, "panaroo/gene_presence_absence.csv"),
+        os.path.join(RESULTS, "orthofinder/Results/SpeciesTree_rooted.txt"),
+        os.path.join(RESULTS, "phylogeny/core_tree.nwk"),
+        os.path.join(RESULTS, "tables/pav_matrix.csv"),
+        os.path.join(RESULTS, "tables/functional_table.csv"),
+        os.path.join(RESULTS, "metrics_summary.xlsx"),

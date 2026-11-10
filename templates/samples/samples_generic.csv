@@ -1,0 +1,5 @@
+sample_id,fastq_1,fastq_2,condition,batch
+SAMPLE_01,__PROJ_DIR__/raw/SAMPLE_01_R1.fastq.gz,__PROJ_DIR__/raw/SAMPLE_01_R2.fastq.gz,controle,1
+SAMPLE_02,__PROJ_DIR__/raw/SAMPLE_02_R1.fastq.gz,__PROJ_DIR__/raw/SAMPLE_02_R2.fastq.gz,controle,1
+SAMPLE_03,__PROJ_DIR__/raw/SAMPLE_03_R1.fastq.gz,__PROJ_DIR__/raw/SAMPLE_03_R2.fastq.gz,tratamento,1
+SAMPLE_04,__PROJ_DIR__/raw/SAMPLE_04_R1.fastq.gz,__PROJ_DIR__/raw/SAMPLE_04_R2.fastq.gz,tratamento,1

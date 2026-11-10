@@ -1,0 +1,64 @@
+# ============================================================
+# PIPELINE: pangenome_prokaryote
+# Entrada: genomas anotados (.gff + .faa) de um assembly_prokaryote
+# Fluxo: Panaroo → OrthoFinder → alinhamento core → IQ-TREE2 → tabelas R
+# ============================================================
+pipeline_type:  "pangenome_prokaryote"
+project_name:   "__PROJ_NAME__"
+description:    ""
+organism:       ""
+date:           "__DATE__"
+
+threads:        4
+threads_heavy:  4
+memory_gb:      32
+
+raw_dir:        "__PROJ_DIR__/raw"
+processed_dir:  "__PROJ_DIR__/processed"
+results_dir:    "__PROJ_DIR__/results"
+logs_dir:       "__PROJ_DIR__/logs"
+tmp_dir:        "__PROJ_DIR__/tmp"
+
+databases:
+  eggnog: "/mnt/bioinfo/databases/eggnog"
+
+# ── Entrada ──────────────────────────────────────────────────
+input:
+  genomes_dir: ""   # diretório com .fasta ou .fna dos genomas
+  gff_dir:     ""   # diretório com .gff da anotação (Bakta/Prokka)
+  # Se vier de um projeto assembly_prokaryote:
+  # genomes_dir: "/mnt/bioinfo/projects/SEU_ASSEMBLY/results/annotation/genomes"
+  # gff_dir:     "/mnt/bioinfo/projects/SEU_ASSEMBLY/results/annotation/gff"
+
+# ── Etapa 1: Pangenoma (Panaroo) ──────────────────────────────
+panaroo:
+  mode:           "strict"     # strict | moderate | sensitive
+  min_freq_core:  0.99         # frequência mínima para definir core gene
+  min_freq_soft:  0.95
+  aligner:        "mafft"
+
+# ── Etapa 2: Ortólogos (OrthoFinder) ─────────────────────────
+orthofinder:
+  run:        true
+  inflation:  1.5
+  method:     "diamond"        # diamond | blast
+
+# ── Etapa 3: Alinhamento e árvore (core genome) ──────────────
+phylogeny:
+  aligner:       "mafft"
+  trimmer:       "trimal"
+  trimal_mode:   "automated1"
+  tree_tool:     "iqtree2"     # iqtree2 | fasttree
+  iqtree_model:  "GTR+G"
+  bootstrap:     1000
+
+# ── Etapa 4: Anotação funcional do pangenoma ─────────────────
+functional:
+  run_eggnog: true             # anota proteínas representativas de cada cluster
+
+# ── Saída para RStudio ────────────────────────────────────────
+output:
+  pav_matrix:          true   # matriz presença/ausência (genes × genomas)
+  core_accessory_table: true  # tabela com classificação de cada gene
+  functional_table:    true   # tabela com anotação funcional por gene
+  metrics_spreadsheet: true

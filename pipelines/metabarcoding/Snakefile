@@ -1,0 +1,26 @@
+import pandas as pd, os
+
+configfile: "config.yaml"
+
+SAMPLES    = pd.read_csv("samples.csv").set_index("sample_id", drop=False)
+SAMPLE_IDS = SAMPLES.index.tolist()
+RAW        = config["raw_dir"]
+PROC       = config["processed_dir"]
+RESULTS    = config["results_dir"]
+LOGS       = config["logs_dir"]
+THREADS    = config.get("threads", 4)
+MARKER     = config["marker"]["gene"]
+GROUP_VAR  = config["diversity"]["grouping_variable"]
+
+for smk in ["primers", "qc", "dada2", "taxonomy", "diversity", "aggregate"]:
+    include: os.path.expanduser(f"~/lab/pipelines/metabarcoding/rules/{smk}.smk")
+
+rule all:
+    input:
+        os.path.join(RESULTS, "qc/multiqc_report.html"),
+        os.path.join(RESULTS, "dada2/asv_table.rds"),
+        os.path.join(RESULTS, "taxonomy/taxonomy_table.rds"),
+        os.path.join(RESULTS, "diversity/alpha_diversity.csv"),
+        os.path.join(RESULTS, "diversity/beta_diversity.rds"),
+        os.path.join(RESULTS, "phyloseq_object.rds"),
+        os.path.join(RESULTS, "metrics_summary.xlsx"),

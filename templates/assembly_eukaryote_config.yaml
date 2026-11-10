@@ -1,0 +1,88 @@
+# ============================================================
+# PIPELINE: assembly_eukaryote
+# Fluxo: fastp → decontam → montagem → QUAST+BUSCO →
+#        RepeatMasker(Docker) → BRAKER3(Docker) → EggNOG
+# ============================================================
+pipeline_type:  "assembly_eukaryote"
+project_name:   "__PROJ_NAME__"
+description:    ""
+organism:       ""
+date:           "__DATE__"
+
+threads:        4
+threads_heavy:  4
+threads_light:  2
+memory_gb:      32
+
+raw_dir:        "__PROJ_DIR__/raw"
+processed_dir:  "__PROJ_DIR__/processed"
+results_dir:    "__PROJ_DIR__/results"
+logs_dir:       "__PROJ_DIR__/logs"
+tmp_dir:        "__PROJ_DIR__/tmp"
+
+databases:
+  busco_lineage:  "fungi_odb10"  # fungi_odb10 | eukaryota_odb10 | metazoa_odb10
+  busco:          "/mnt/bioinfo/databases/busco"
+  eggnog:         "/mnt/bioinfo/databases/eggnog"
+  orthodb:        "/mnt/bioinfo/databases/orthodb/Fungi.fa"
+  kraken2:        "/mnt/bioinfo/databases/kraken2/standard-8"
+  repeatmasker:   "/mnt/bioinfo/databases/repeatmasker"
+
+# ── Docker containers (gerenciados pelo Apptainer) ────────────
+containers:
+  tetools:  "~/lab/software/containers/tetools.sif"    # RepeatMasker + RepeatModeler
+  braker3:  "~/lab/software/containers/braker3.sif"
+
+# ── Etapa 1: QC ──────────────────────────────────────────────
+qc:
+  quality_threshold:  20
+  min_length:         36
+  extra_flags:        "--detect_adapter_for_pe --correction"
+
+# ── Etapa 2: Remoção de contaminantes ────────────────────────
+decontam:
+  run:        false
+  reference:  "/mnt/bioinfo/databases/genomes/human/GRCh38.fa"
+
+# ── Etapa 3: Montagem ─────────────────────────────────────────
+assembly:
+  tool:           "spades"    # spades | flye | unicycler
+  data_type:      "illumina"  # illumina | nanopore | hybrid
+  min_contig_len: 1000
+  genome_size:    "40m"       # estimativa para Flye
+
+# ── Etapa 4: Polimento ONT (opcional) ────────────────────────
+polish:
+  run:        false
+  tool:       "medaka"
+  model:      "r1041_e82_400bps_sup_v5.0.0"
+  iterations: 1
+
+# ── Etapa 5: Avaliação ────────────────────────────────────────
+evaluate:
+  run_quast: true
+  run_busco: true
+
+# ── Etapa 6: Mascaramento de repetições (RepeatMasker) ────────
+repeats:
+  run_repeatmodeler: true   # true = constrói biblioteca de novo; false = usa existente
+  repeat_library:    ""     # caminho para biblioteca existente (se run_repeatmodeler: false)
+  soft_mask:         true   # true = soft-mask (recomendado para BRAKER3)
+  species:           ""     # ex: "fungi" — usado se run_repeatmodeler: false
+
+# ── Etapa 7: Predição de genes (BRAKER3) ──────────────────────
+braker:
+  evidence:   "proteins"    # proteins | rnaseq | both
+  rnaseq_bam: ""            # caminho para BAM se evidence: rnaseq ou both
+  augustus_species: ""      # deixe vazio para treinar do zero
+
+# ── Etapa 8: Anotação funcional ───────────────────────────────
+annotation:
+  run_eggnog:     true
+  run_interpro:   false     # true requer container InterProScan
+
+# ── Saída ─────────────────────────────────────────────────────
+output:
+  metrics_spreadsheet: true
+  multiqc:             true
+  copy_genomes_to:     ""

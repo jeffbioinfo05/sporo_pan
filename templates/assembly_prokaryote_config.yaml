@@ -1,0 +1,74 @@
+# ============================================================
+# PIPELINE: assembly_prokaryote
+# Fluxo: fastp → decontam → montagem → QUAST+BUSCO+CheckM2 → Bakta → EggNOG
+# ============================================================
+pipeline_type:  "assembly_prokaryote"
+project_name:   "__PROJ_NAME__"
+description:    ""
+organism:       ""
+date:           "__DATE__"
+
+threads:        4
+threads_heavy:  4
+threads_light:  2
+memory_gb:      32
+
+raw_dir:        "__PROJ_DIR__/raw"
+processed_dir:  "__PROJ_DIR__/processed"
+results_dir:    "__PROJ_DIR__/results"
+logs_dir:       "__PROJ_DIR__/logs"
+tmp_dir:        "__PROJ_DIR__/tmp"
+
+databases:
+  busco_lineage:  "bacteria_odb10"   # bacteria_odb10 | archaea_odb10
+  busco:          "/mnt/bioinfo/databases/busco"
+  bakta:          "/mnt/bioinfo/databases/bakta"
+  eggnog:         "/mnt/bioinfo/databases/eggnog"
+  kraken2:        "/mnt/bioinfo/databases/kraken2/standard-8"
+  checkm2:        "/mnt/bioinfo/databases/checkm2"
+
+# ── Etapa 1: QC ──────────────────────────────────────────────
+qc:
+  quality_threshold:  20
+  min_length:         36
+  extra_flags:        "--detect_adapter_for_pe --correction"
+
+# ── Etapa 2: Remoção de contaminantes ────────────────────────
+decontam:
+  run:        false
+  reference:  "/mnt/bioinfo/databases/genomes/human/GRCh38.fa"
+  # true para amostras clínicas ou com possível contaminação humana
+
+# ── Etapa 3: Montagem ─────────────────────────────────────────
+assembly:
+  tool:           "shovill"   # shovill | spades | flye | unicycler
+  data_type:      "illumina"  # illumina | nanopore | pacbio | hybrid
+  genome_size:    "5m"
+  min_contig_len: 500
+  shovill_depth:  100         # cobertura alvo (shovill faz sub-sampling)
+
+# ── Etapa 4: Polimento ONT (opcional) ────────────────────────
+polish:
+  run:        false
+  tool:       "medaka"        # env isolado: ~/lab/software/envs/medaka
+  model:      "r1041_e82_400bps_sup_v5.0.0"
+  iterations: 1
+
+# ── Etapa 5: Avaliação ────────────────────────────────────────
+evaluate:
+  run_quast:   true
+  run_busco:   true
+  run_checkm2: true
+
+# ── Etapa 6: Anotação ─────────────────────────────────────────
+annotation:
+  tool:       "bakta"         # bakta | prokka
+  genus:      ""
+  species:    ""
+  run_eggnog: true
+
+# ── Saída ─────────────────────────────────────────────────────
+output:
+  metrics_spreadsheet: true
+  multiqc:             true
+  copy_genomes_to:     ""     # caminho opcional para copiar .faa/.gff para pangenoma

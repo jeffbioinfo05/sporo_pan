@@ -1,0 +1,22 @@
+import pandas as pd, os
+
+configfile: "config.yaml"
+
+SAMPLES    = pd.read_csv("samples.csv").set_index("sample_id", drop=False)
+SAMPLE_IDS = SAMPLES.index.tolist()
+RAW        = config["raw_dir"]
+PROC       = config["processed_dir"]
+RESULTS    = config["results_dir"]
+LOGS       = config["logs_dir"]
+THREADS    = config.get("threads", 4)
+GENE       = config["blast"]["gene"]
+
+for smk in ["extract", "consensus", "blast_search", "neighbors", "phylogeny", "aggregate"]:
+    include: os.path.expanduser(f"~/lab/pipelines/sanger/rules/{smk}.smk")
+
+rule all:
+    input:
+        expand(os.path.join(RESULTS, "consensus/{sample}.fasta"),   sample=SAMPLE_IDS),
+        expand(os.path.join(RESULTS, "blast/{sample}_hits.tsv"),    sample=SAMPLE_IDS),
+        os.path.join(RESULTS, "phylogeny/tree.nwk"),
+        os.path.join(RESULTS, "metrics_summary.xlsx"),

@@ -1,0 +1,49 @@
+# ============================================================
+# IDENTIDADE
+# ============================================================
+pipeline_type:  "__PIPELINE__"
+project_name:   "__PROJ_NAME__"
+description:    ""
+organism:       ""
+date:           "__DATE__"
+
+# ============================================================
+# HARDWARE
+# Ajuste conforme o PC disponível.
+# Para sobrepor na linha de comando: run_pipeline.sh --cores 16
+# ============================================================
+threads:        4
+threads_heavy:  4
+threads_light:  2
+memory_gb:      32
+
+# ============================================================
+# CAMINHOS (preenchidos automaticamente pelo new_project.sh)
+# ============================================================
+raw_dir:        "__PROJ_DIR__/raw"
+processed_dir:  "__PROJ_DIR__/processed"
+results_dir:    "__PROJ_DIR__/results"
+logs_dir:       "__PROJ_DIR__/logs"
+tmp_dir:        "__PROJ_DIR__/tmp"
+
+# ============================================================
+# BANCOS DE DADOS (caminhos centralizados)
+# ============================================================
+databases:
+  busco:        "/mnt/bioinfo/databases/busco"
+  bakta:        "/mnt/bioinfo/databases/bakta"
+  eggnog:       "/mnt/bioinfo/databases/eggnog"
+  kraken2:      "/mnt/bioinfo/databases/kraken2/standard-8"
+  checkm2:      "/mnt/bioinfo/databases/checkm2"
+  orthodb:      "/mnt/bioinfo/databases/orthodb"
+  silva:        "/mnt/bioinfo/databases/silva"
+  blast_16s:    "/mnt/bioinfo/databases/blast/16S_ribosomal_RNA"
+  blast_its:    "/mnt/bioinfo/databases/blast/ITS_RefSeq_Fungi"
+
+# ============================================================
+# OUTPUT
+# ============================================================
+output:
+  metrics_spreadsheet: true
+  multiqc:             true
+  summary_plots:       true

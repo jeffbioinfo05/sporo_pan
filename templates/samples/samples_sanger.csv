@@ -1,0 +1,5 @@
+sample_id,ab1_fwd,ab1_rev,gene,organism_type,description
+ISOL_01,__PROJ_DIR__/raw/ISOL_01_F.ab1,__PROJ_DIR__/raw/ISOL_01_R.ab1,16S,bacteria,Isolado solo 2026
+ISOL_02,__PROJ_DIR__/raw/ISOL_02_F.ab1,__PROJ_DIR__/raw/ISOL_02_R.ab1,16S,bacteria,Isolado solo 2026
+ISOL_03,__PROJ_DIR__/raw/ISOL_03_F.ab1,,16S,bacteria,Apenas forward disponível
+FUNG_01,__PROJ_DIR__/raw/FUNG_01_F.ab1,__PROJ_DIR__/raw/FUNG_01_R.ab1,ITS,fungi,Isolado fúngico

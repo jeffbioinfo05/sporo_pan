@@ -1,0 +1,52 @@
+# ============================================================
+# PIPELINE: rnaseq  [ESQUELETO — instalar quando precisar]
+# Para instalar o env:
+#   mamba env create -f /tmp/env_rnaseq.yml --prefix ~/lab/software/envs/rnaseq
+# ============================================================
+pipeline_type:  "rnaseq"
+project_name:   "__PROJ_NAME__"
+description:    ""
+date:           "__DATE__"
+
+threads:        4
+threads_heavy:  4
+memory_gb:      32
+
+raw_dir:        "__PROJ_DIR__/raw"
+processed_dir:  "__PROJ_DIR__/processed"
+results_dir:    "__PROJ_DIR__/results"
+logs_dir:       "__PROJ_DIR__/logs"
+tmp_dir:        "__PROJ_DIR__/tmp"
+
+databases:
+  genome:      "/mnt/bioinfo/databases/genomes/human/GRCh38.fa"
+  annotation:  "/mnt/bioinfo/databases/genomes/human/gencode.v46.gtf"
+  star_index:  "/mnt/bioinfo/databases/genomes/human/STAR_index"
+
+qc:
+  quality_threshold:  20
+  min_length:         36
+  extra_flags:        "--detect_adapter_for_pe"
+
+alignment:
+  tool:         "star"        # star | hisat2
+  two_pass:     true
+  strandness:   "reverse"     # reverse | forward | unstranded
+
+quantification:
+  tool:         "featureCounts"  # featureCounts | salmon | kallisto
+
+contrasts:
+  - name:   "tratamento_vs_controle"
+    group1: "tratamento"
+    group2: "controle"
+
+thresholds:
+  padj:    0.05
+  log2fc:  1.0
+
+output:
+  counts_matrix:       true   # matriz pronta para DESeq2/edgeR no RStudio
+  normalized_counts:   true
+  metrics_spreadsheet: true
+  multiqc:             true

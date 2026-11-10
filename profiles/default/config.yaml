@@ -1,0 +1,14 @@
+# Perfil padrão do Snakemake — v2
+cores:                    4
+use-conda:                true
+use-singularity:          true
+conda-prefix:             ~/lab/software/envs
+singularity-prefix:       ~/lab/software/containers
+singularity-args:         "--bind /mnt/bioinfo"
+printshellcmds:           true
+rerun-incomplete:         true
+keep-going:               false
+latency-wait:             30
+show-failed-logs:         true
+# Gera relatório HTML automaticamente ao final
+# (o run_pipeline.sh já chama --report explicitamente)

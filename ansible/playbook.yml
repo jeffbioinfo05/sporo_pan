@@ -1,0 +1,204 @@
+---
+# ============================================================
+# ANSIBLE PLAYBOOK — Provisiona PC de Bioinformática do Zero
+# Uso em PC novo:
+#   sudo apt install ansible -y
+#   ansible-playbook -i ansible/inventory.ini ansible/playbook.yml
+#   (ou remotamente de outro PC)
+# ============================================================
+
+- name: Setup PC de Bioinformática
+  hosts: bioinfo_pc
+  become: false    # a maioria das tasks roda como usuário normal
+  vars:
+    lab_repo:    "git@github.com:SEU_USUARIO/lab_bioinfo.git"   # edite aqui
+    hd_mount:    "/mnt/bioinfo"
+    user:        "{{ ansible_user_id }}"
+
+  tasks:
+
+    # ── Sistema ──────────────────────────────────────────────
+    - name: Atualizar apt
+      apt:
+        update_cache: yes
+        upgrade: dist
+      become: true
+
+    - name: Instalar pacotes essenciais
+      apt:
+        name:
+          - build-essential
+          - git
+          - wget
+          - curl
+          - tmux
+          - htop
+          - btop
+          - tree
+          - ncdu
+          - nvme-cli
+          - smartmontools
+          - pigz
+          - pbzip2
+          - parallel
+          - fzf
+          - libxml2-dev
+          - libcurl4-openssl-dev
+          - libssl-dev
+          - libfontconfig1-dev
+          - libharfbuzz-dev
+          - libfribidi-dev
+          - libfreetype6-dev
+          - libpng-dev
+          - libtiff5-dev
+          - libjpeg-dev
+          - libbz2-dev
+          - liblzma-dev
+          - zlib1g-dev
+          - python3-pip
+          - openjdk-17-jre-headless
+          - cmake
+          - apptainer
+          - shellcheck
+        state: present
+      become: true
+
+    # ── Docker ───────────────────────────────────────────────
+    - name: Verificar se Docker está instalado
+      command: docker --version
+      register: docker_check
+      failed_when: false
+      changed_when: false
+
+    - name: Instalar Docker
+      shell: curl -fsSL https://get.docker.com | sudo sh
+      when: docker_check.rc != 0
+      become: true
+
+    - name: Adicionar usuário ao grupo docker
+      user:
+        name: "{{ user }}"
+        groups: docker
+        append: yes
+      become: true
+
+    # ── VSCode ───────────────────────────────────────────────
+    - name: Verificar se VSCode está instalado
+      command: code --version
+      register: vscode_check
+      failed_when: false
+      changed_when: false
+
+    - name: Instalar VSCode
+      shell: |
+        wget -qO /tmp/vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+        dpkg -i /tmp/vscode.deb
+        apt install -f -y
+        rm /tmp/vscode.deb
+      when: vscode_check.rc != 0
+      become: true
+
+    # ── fzf ──────────────────────────────────────────────────
+    - name: Configurar fzf no bashrc
+      lineinfile:
+        path: "~/.bashrc"
+        line: "[ -f /usr/share/doc/fzf/examples/key-bindings.bash ] && source /usr/share/doc/fzf/examples/key-bindings.bash"
+        state: present
+
+    # ── Miniforge ────────────────────────────────────────────
+    - name: Verificar se Miniforge está instalado
+      stat:
+        path: "~/miniforge3/bin/mamba"
+      register: miniforge_check
+
+    - name: Instalar Miniforge
+      shell: |
+        wget -q https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh \
+          -O /tmp/miniforge.sh
+        bash /tmp/miniforge.sh -b -p ~/miniforge3
+        rm /tmp/miniforge.sh
+        ~/miniforge3/bin/mamba init bash
+      when: not miniforge_check.stat.exists
+
+    - name: Configurar canais conda
+      shell: |
+        source ~/.bashrc
+        conda config --set auto_activate_base false
+        conda config --add channels bioconda
+        conda config --add channels conda-forge
+        conda config --set channel_priority strict
+
+    # ── Estrutura de diretórios ───────────────────────────────
+    - name: Criar estrutura no HD
+      file:
+        path: "{{ hd_mount }}/{{ item }}"
+        state: directory
+        mode: '0755'
+      loop:
+        - databases/genomes/human
+        - databases/genomes/model_organisms
+        - databases/kraken2
+        - databases/busco
+        - databases/silva
+        - databases/blast
+        - databases/checkm2
+        - databases/bakta
+        - databases/eggnog
+        - databases/orthodb
+        - databases/repeatmasker
+        - raw_data
+        - projects
+        - archive
+        - tmp
+      become: true
+      ignore_errors: true
+
+    - name: Ajustar permissões do HD
+      file:
+        path: "{{ hd_mount }}"
+        owner: "{{ user }}"
+        group: "{{ user }}"
+        recurse: yes
+      become: true
+      ignore_errors: true
+
+    # ── Repositório do lab ────────────────────────────────────
+    - name: Verificar se lab já foi clonado
+      stat:
+        path: "~/lab/.git"
+      register: lab_check
+
+    - name: Clonar repositório do lab
+      git:
+        repo: "{{ lab_repo }}"
+        dest: "~/lab"
+        accept_hostkey: yes
+      when: not lab_check.stat.exists
+
+    # ── PATH ─────────────────────────────────────────────────
+    - name: Adicionar ~/lab/scripts ao PATH
+      lineinfile:
+        path: "~/.bashrc"
+        line: 'export PATH="$HOME/lab/scripts:$HOME/.local/bin:$PATH"'
+        state: present
+
+    # ── Chezmoi dotfiles ─────────────────────────────────────
+    - name: Verificar se chezmoi está instalado
+      command: chezmoi --version
+      register: chezmoi_check
+      failed_when: false
+      changed_when: false
+
+    - name: Instalar chezmoi
+      shell: sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
+      when: chezmoi_check.rc != 0
+
+    - name: Avisos finais
+      debug:
+        msg:
+          - "PC provisionado com sucesso!"
+          - "Próximos passos:"
+          - "  1. source ~/.bashrc"
+          - "  2. bash ~/lab/02_setup_envs.sh  (instala ambientes conda)"
+          - "  3. bash ~/lab/05_download_databases.sh  (bancos de dados)"
+          - "  4. chezmoi apply  (aplica dotfiles pessoais)"

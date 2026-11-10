@@ -1,0 +1,47 @@
+# ============================================================
+# PIPELINE: rnaseq  [ESQUELETO]
+# Para ativar: mamba env create -f /tmp/env_rnaseq.yml --prefix ~/lab/software/envs/rnaseq
+#
+# Passos a implementar (cada um vira uma rule):
+#   1. fastp          — QC e trimagem (env: general)
+#   2. star_index     — indexar genoma de referência (env: rnaseq) [rodar uma vez]
+#   3. star_align     — alinhar reads ao genoma (env: rnaseq)
+#   4. featurecounts  — contar reads por gene (env: rnaseq)
+#   5. deseq2         — análise diferencial via script R (env: rnaseq)
+#   6. aggregate      — gerar metrics_summary.xlsx (env: general)
+#
+# Ferramentas alternativas por etapa:
+#   Alinhamento:    STAR (padrão) | HISAT2
+#   Quantificação:  featureCounts (padrão) | Salmon (pseudo-alinhamento) | Kallisto
+#   DEA:            DESeq2 (padrão) | edgeR
+#
+# Output para RStudio:
+#   results/counts_matrix.csv       — matriz de contagens brutas
+#   results/normalized_counts.csv   — contagens normalizadas (VST/rlog)
+#   results/metrics_summary.xlsx    — métricas de QC e alinhamento
+# ============================================================
+import pandas as pd, os
+
+configfile: "config.yaml"
+
+SAMPLES    = pd.read_csv("samples.csv").set_index("sample_id", drop=False)
+SAMPLE_IDS = SAMPLES.index.tolist()
+RESULTS    = config["results_dir"]
+LOGS       = config["logs_dir"]
+THREADS    = config.get("threads", 4)
+
+rule all:
+    input:
+        # TODO: descomente à medida que implementar cada etapa
+        # os.path.join(RESULTS, "qc/multiqc_report.html"),
+        # expand(os.path.join(RESULTS, "aligned/{sample}.bam"), sample=SAMPLE_IDS),
+        # os.path.join(RESULTS, "counts_matrix.csv"),
+        # os.path.join(RESULTS, "metrics_summary.xlsx"),
+        []
+
+# TODO: implemente as rules abaixo
+# rule fastp: ...
+# rule star_align: ...
+# rule featurecounts: ...
+# rule deseq2_prep: ...
+# rule aggregate_metrics: ...

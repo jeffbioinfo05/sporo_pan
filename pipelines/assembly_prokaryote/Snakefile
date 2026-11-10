@@ -1,0 +1,26 @@
+import pandas as pd, os
+
+configfile: "config.yaml"
+
+SAMPLES    = pd.read_csv("samples.csv").set_index("sample_id", drop=False)
+SAMPLE_IDS = SAMPLES.index.tolist()
+RAW        = config["raw_dir"]
+PROC       = config["processed_dir"]
+RESULTS    = config["results_dir"]
+LOGS       = config["logs_dir"]
+TMP        = config["tmp_dir"]
+THREADS    = config.get("threads", 4)
+THREADS_H  = config.get("threads_heavy", THREADS)
+
+for smk in ["qc", "decontam", "assembly", "evaluate", "annotate", "aggregate"]:
+    include: os.path.expanduser(f"~/lab/pipelines/assembly_prokaryote/rules/{smk}.smk")
+
+rule all:
+    input:
+        os.path.join(RESULTS, "qc/multiqc_report.html"),
+        expand(os.path.join(RESULTS, "assembly/{sample}/assembly.fasta"),    sample=SAMPLE_IDS),
+        expand(os.path.join(RESULTS, "evaluate/quast/{sample}/report.tsv"),  sample=SAMPLE_IDS),
+        expand(os.path.join(RESULTS, "evaluate/busco/{sample}/short_summary.txt"), sample=SAMPLE_IDS),
+        expand(os.path.join(RESULTS, "evaluate/checkm2/{sample}/quality_report.tsv"), sample=SAMPLE_IDS),
+        expand(os.path.join(RESULTS, "annotation/{sample}/{sample}.gff"),    sample=SAMPLE_IDS),
+        os.path.join(RESULTS, "metrics_summary.xlsx"),

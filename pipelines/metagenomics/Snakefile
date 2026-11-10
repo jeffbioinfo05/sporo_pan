@@ -1,0 +1,51 @@
+# ============================================================
+# PIPELINE: metagenomics  [ESQUELETO]
+# Para ativar: mamba env create -f /tmp/env_metagenomics.yml --prefix ~/lab/software/envs/metagenomics
+#
+# Passos a implementar (cada um vira uma rule):
+#   1.  fastp           — QC e trimagem (env: general)
+#   2.  host_removal    — remover reads do hospedeiro via minimap2 (env: general)
+#   3.  kraken2         — classificação taxonômica (env: metagenomics)
+#   4.  bracken         — estimativa de abundância (env: metagenomics)
+#   5.  metaphlan       — perfil taxonômico alternativo (env: metagenomics)
+#   6.  humann          — perfil funcional (env: metagenomics)
+#   7.  megahit         — montagem metagenômica (env: metagenomics)
+#   8.  metabat2        — binning (env: metagenomics)
+#   9.  maxbin2         — binning alternativo (env: metagenomics)
+#   10. das_tool        — refinamento de bins (env: metagenomics)
+#   11. checkm2         — avaliação de MAGs (env: assembly)
+#   12. prokka/bakta    — anotação de MAGs (env: assembly)
+#   13. eggnog          — anotação funcional de MAGs (env: assembly)
+#   14. aggregate       — gerar tabelas e metrics_summary.xlsx (env: general)
+#
+# Output para RStudio:
+#   results/taxonomy/kraken2_merged.csv    — perfis Kraken2 por amostra
+#   results/taxonomy/metaphlan_merged.csv  — perfis MetaPhlAn por amostra
+#   results/functional/humann_merged.csv   — perfis funcionais HUMAnN
+#   results/mags/mag_stats.csv             — qualidade de MAGs (CheckM2)
+#   results/metrics_summary.xlsx           — métricas integradas
+# ============================================================
+import pandas as pd, os
+
+configfile: "config.yaml"
+
+SAMPLES    = pd.read_csv("samples.csv").set_index("sample_id", drop=False)
+SAMPLE_IDS = SAMPLES.index.tolist()
+RESULTS    = config["results_dir"]
+LOGS       = config["logs_dir"]
+THREADS    = config.get("threads", 4)
+
+rule all:
+    input:
+        # TODO: descomente à medida que implementar cada etapa
+        # os.path.join(RESULTS, "qc/multiqc_report.html"),
+        # expand(os.path.join(RESULTS, "taxonomy/kraken2/{sample}.report"), sample=SAMPLE_IDS),
+        # os.path.join(RESULTS, "taxonomy/kraken2_merged.csv"),
+        # os.path.join(RESULTS, "taxonomy/metaphlan_merged.csv"),
+        # os.path.join(RESULTS, "functional/humann_merged.csv"),
+        # os.path.join(RESULTS, "mags/das_tool_bins"),
+        # os.path.join(RESULTS, "mags/mag_stats.csv"),
+        # os.path.join(RESULTS, "metrics_summary.xlsx"),
+        []
+
+# TODO: implemente as rules — cada uma em rules/<nome>.smk

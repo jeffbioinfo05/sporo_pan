@@ -1,0 +1,47 @@
+import pandas as pd, os, glob
+
+configfile: "config.yaml"
+
+SAMPLES    = pd.read_csv("samples.csv").set_index("sample_id", drop=False)
+SAMPLE_IDS = SAMPLES.index.tolist()
+RAW        = config["raw_dir"]
+PROC       = config["processed_dir"]
+RESULTS    = config["results_dir"]
+LOGS       = config["logs_dir"]
+TMP        = config["tmp_dir"]
+THREADS    = config.get("threads", 4)
+THREADS_H  = config.get("threads_heavy", THREADS)
+CONTAINERS = config.get("containers", {})
+
+# Amostras que passaram no filtro de qualidade
+def passed_samples():
+    passed = []
+    status_dir = os.path.join(RESULTS, "filtered")
+    for s in SAMPLE_IDS:
+        status_file = os.path.join(status_dir, s, "filter_status.tsv")
+        if os.path.exists(status_file):
+            with open(status_file) as f:
+                lines = f.readlines()
+                if len(lines) > 1 and "PASSED" in lines[1]:
+                    passed.append(s)
+    return passed if passed else SAMPLE_IDS  # antes do filtro, usa todos
+
+for smk in ["qc", "decontam", "assembly", "evaluate",
+            "filter_contigs", "repeats", "annotate", "aggregate"]:
+    include: os.path.expanduser(f"~/lab/pipelines/assembly_eukaryote/rules/{smk}.smk")
+
+rule all:
+    input:
+        # QC
+        os.path.join(RESULTS, "qc/multiqc_report.html"),
+        # Montagem
+        expand(os.path.join(RESULTS, "assembly/{sample}/assembly.fasta"),    sample=SAMPLE_IDS),
+        # Avaliação
+        expand(os.path.join(RESULTS, "evaluate/quast/{sample}/report.tsv"),  sample=SAMPLE_IDS),
+        expand(os.path.join(RESULTS, "evaluate/busco/{sample}/short_summary.txt"), sample=SAMPLE_IDS),
+        # Filtro de contigs bacterianos
+        expand(os.path.join(RESULTS, "decontam_contigs/{sample}/assembly_clean.fasta"), sample=SAMPLE_IDS),
+        # Filtro de qualidade
+        expand(os.path.join(RESULTS, "filtered/{sample}/filter_status.tsv"), sample=SAMPLE_IDS),
+        # Métricas finais
+        os.path.join(RESULTS, "metrics_summary.xlsx"),

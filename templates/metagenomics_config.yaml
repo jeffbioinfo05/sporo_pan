@@ -1,0 +1,68 @@
+# ============================================================
+# PIPELINE: metagenomics  [ESQUELETO — instalar quando precisar]
+# Para instalar o env:
+#   mamba env create -f /tmp/env_metagenomics.yml --prefix ~/lab/software/envs/metagenomics
+# ============================================================
+pipeline_type:  "metagenomics"
+project_name:   "__PROJ_NAME__"
+description:    ""
+date:           "__DATE__"
+
+threads:        4
+threads_heavy:  4
+memory_gb:      64
+
+raw_dir:        "__PROJ_DIR__/raw"
+processed_dir:  "__PROJ_DIR__/processed"
+results_dir:    "__PROJ_DIR__/results"
+logs_dir:       "__PROJ_DIR__/logs"
+tmp_dir:        "__PROJ_DIR__/tmp"
+
+databases:
+  kraken2:    "/mnt/bioinfo/databases/kraken2/standard-8"
+  metaphlan:  "/mnt/bioinfo/databases/metaphlan"
+  humann_nt:  "/mnt/bioinfo/databases/humann/chocophlan"
+  humann_prot: "/mnt/bioinfo/databases/humann/uniref"
+  checkm2:    "/mnt/bioinfo/databases/checkm2"
+  eggnog:     "/mnt/bioinfo/databases/eggnog"
+  host:       "/mnt/bioinfo/databases/genomes/human/GRCh38.fa"
+
+qc:
+  quality_threshold:  20
+  min_length:         50
+  extra_flags:        "--detect_adapter_for_pe"
+
+host_removal:
+  run:   false              # true para amostras com hospedeiro
+
+taxonomic_profiling:
+  run_kraken2:    true
+  run_bracken:    true
+  bracken_readlen: 150
+  run_metaphlan:  true
+
+functional_profiling:
+  run_humann:   true
+
+assembly:
+  run:              true
+  tool:             "megahit"
+  min_contig_len:   1000
+
+binning:
+  run:         true
+  tools:       ["metabat2", "maxbin2"]
+  das_tool:    true
+  min_completeness:   50.0
+  max_contamination:  10.0
+
+mag_annotation:
+  run_prokka:   true
+  run_eggnog:   true
+
+output:
+  taxonomic_tables:    true  # Kraken2 + MetaPhlAn em CSV
+  functional_tables:   true  # HUMAnN pathways em CSV
+  mag_stats:           true  # CheckM2 por MAG
+  metrics_spreadsheet: true
+  multiqc:             true

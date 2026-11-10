@@ -1,0 +1,68 @@
+# ============================================================
+# PIPELINE: sanger
+# Fluxo: Tracy(.ab1) → consenso → BLAST → busca vizinhos →
+#        MAFFT → trimAl → IQ-TREE2 → tabela de resultados
+# ============================================================
+pipeline_type:  "sanger"
+project_name:   "__PROJ_NAME__"
+description:    ""
+date:           "__DATE__"
+
+threads:        4
+threads_heavy:  4
+memory_gb:      16
+
+raw_dir:        "__PROJ_DIR__/raw"    # .ab1 ficam aqui
+processed_dir:  "__PROJ_DIR__/processed"
+results_dir:    "__PROJ_DIR__/results"
+logs_dir:       "__PROJ_DIR__/logs"
+tmp_dir:        "__PROJ_DIR__/tmp"
+
+databases:
+  # Banco local para BLAST rápido (baixar via 05_download_databases.sh)
+  blast_16s:  "/mnt/bioinfo/databases/blast/16S_ribosomal_RNA"
+  blast_its:  "/mnt/bioinfo/databases/blast/ITS_RefSeq_Fungi"
+
+# ── Etapa 1: Extração e QC das leituras .ab1 (Tracy) ─────────
+ab1:
+  min_quality:    20          # qualidade mínima de base Phred
+  trim_ends:      true        # apara extremidades de baixa qualidade
+
+# ── Etapa 2: Montagem da consenso ─────────────────────────────
+consensus:
+  min_overlap:    50          # sobreposição mínima fwd+rev (pb)
+  min_identity:   0.90        # identidade mínima na sobreposição
+  # Se uma amostra tiver apenas fwd ou apenas rev, usa sequência direta
+
+# ── Etapa 3: BLAST ───────────────────────────────────────────
+blast:
+  gene:           "16S"       # 16S | ITS — determina qual banco usar
+  max_hits:       10          # top hits retornados
+  min_identity:   90.0
+  min_coverage:   80.0
+  evalue:         1e-10
+
+# ── Etapa 4: Busca de sequências vizinhas (NCBI Entrez) ───────
+neighbors:
+  n_neighbors:    10          # número de sequências a baixar por amostra
+  organism_filter: ""         # ex: "Fungi" | "Bacteria" | "" (sem filtro)
+  include_outgroup: true      # baixa 1 sequência de outgroup (gênero distante)
+  outgroup_taxid: ""          # taxid do outgroup; vazio = automático
+
+# ── Etapa 5: Alinhamento e árvore ─────────────────────────────
+phylogeny:
+  aligner:       "mafft"
+  mafft_mode:    "auto"       # auto | linsi | ginsi | einsi
+  trimmer:       "trimal"
+  trimal_mode:   "automated1"
+  tree_tool:     "iqtree2"    # iqtree2 | fasttree
+  iqtree_model:  "GTR+G"
+  bootstrap:     1000
+
+# ── Saída ─────────────────────────────────────────────────────
+output:
+  consensus_fasta:     true
+  blast_table:         true   # melhor hit por amostra
+  alignment_fasta:     true
+  tree_newick:         true
+  metrics_spreadsheet: true   # qualidade .ab1, comprimento consenso, top BLAST hit

@@ -1,0 +1,63 @@
+# ============================================================
+# PIPELINE: pangenome_eukaryote
+# Entrada: genomas anotados (.faa + .gff) de assembly_eukaryote
+# Fluxo: OrthoFinder → minigraph-Cactus(Docker) → IQ-TREE2 → tabelas R
+# ============================================================
+pipeline_type:  "pangenome_eukaryote"
+project_name:   "__PROJ_NAME__"
+description:    ""
+organism:       ""
+date:           "__DATE__"
+
+threads:        4
+threads_heavy:  4
+memory_gb:      32
+
+raw_dir:        "__PROJ_DIR__/raw"
+processed_dir:  "__PROJ_DIR__/processed"
+results_dir:    "__PROJ_DIR__/results"
+logs_dir:       "__PROJ_DIR__/logs"
+tmp_dir:        "__PROJ_DIR__/tmp"
+
+containers:
+  cactus: "~/lab/software/containers/cactus.sif"
+
+databases:
+  eggnog: "/mnt/bioinfo/databases/eggnog"
+
+# ── Entrada ──────────────────────────────────────────────────
+input:
+  genomes_dir: ""
+  faa_dir:     ""
+  # Se vier de assembly_eukaryote:
+  # genomes_dir: "/mnt/bioinfo/projects/SEU_ASSEMBLY/results/annotation/genomes"
+  # faa_dir:     "/mnt/bioinfo/projects/SEU_ASSEMBLY/results/annotation/proteins"
+
+# ── Etapa 1: Ortólogos (OrthoFinder) ─────────────────────────
+orthofinder:
+  inflation:  1.5
+  method:     "diamond"
+
+# ── Etapa 2: Alinhamento de genomas inteiros (minigraph-Cactus) ──
+cactus:
+  run:             true
+  minigraph_args:  ""          # flags extras para minigraph
+  cactus_args:     ""
+
+# ── Etapa 3: Árvore de espécies ───────────────────────────────
+phylogeny:
+  source:        "orthofinder"  # orthofinder (SpeciesTree) | cactus
+  tree_tool:     "iqtree2"
+  iqtree_model:  "GTR+G"
+  bootstrap:     1000
+
+# ── Etapa 4: Anotação funcional ───────────────────────────────
+functional:
+  run_eggnog: true
+
+# ── Saída para RStudio ────────────────────────────────────────
+output:
+  pav_matrix:          true
+  orthogroup_table:    true
+  functional_table:    true
+  metrics_spreadsheet: true

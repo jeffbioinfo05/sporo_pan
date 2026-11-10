@@ -1,0 +1,6 @@
+sample_id,fastq_1,fastq_2,treatment,group,replicate,description
+SAMP_01,__PROJ_DIR__/raw/SAMP_01_R1.fastq.gz,__PROJ_DIR__/raw/SAMP_01_R2.fastq.gz,controle,A,1,Controle réplica 1
+SAMP_02,__PROJ_DIR__/raw/SAMP_02_R1.fastq.gz,__PROJ_DIR__/raw/SAMP_02_R2.fastq.gz,controle,A,2,Controle réplica 2
+SAMP_03,__PROJ_DIR__/raw/SAMP_03_R1.fastq.gz,__PROJ_DIR__/raw/SAMP_03_R2.fastq.gz,tratamento,B,1,Tratamento réplica 1
+SAMP_04,__PROJ_DIR__/raw/SAMP_04_R1.fastq.gz,__PROJ_DIR__/raw/SAMP_04_R2.fastq.gz,tratamento,B,2,Tratamento réplica 2
+NEGCTRL,__PROJ_DIR__/raw/NEGCTRL_R1.fastq.gz,__PROJ_DIR__/raw/NEGCTRL_R2.fastq.gz,negativo,NEG,1,Controle negativo de extração

@@ -1,0 +1,90 @@
+# ============================================================
+# PIPELINE: metabarcoding
+# Fluxo: cutadapt(primers) → fastp(QC) → DADA2 → taxonomia → diversidade
+# Suporta: 16S | ITS | ITS2 | p6loop | 12S
+# Grupos/tratamentos definidos no samples.csv
+# ============================================================
+pipeline_type:  "metabarcoding"
+project_name:   "__PROJ_NAME__"
+description:    ""
+organism:       ""          # ex: "bactérias de solo", "fungos de bromélias"
+date:           "__DATE__"
+
+threads:        4
+threads_heavy:  4
+memory_gb:      32
+
+raw_dir:        "__PROJ_DIR__/raw"
+processed_dir:  "__PROJ_DIR__/processed"
+results_dir:    "__PROJ_DIR__/results"
+logs_dir:       "__PROJ_DIR__/logs"
+tmp_dir:        "__PROJ_DIR__/tmp"
+
+# ── Marcador e primers ────────────────────────────────────────
+marker:
+  gene:           "16S"       # 16S | ITS | ITS2 | p6loop | 12S
+  region:         "V3-V4"     # anotar apenas, não afeta análise
+  forward_primer: "GTGYCAGCMGCCGCGGTAA"
+  reverse_primer: "GGACTACNVGGGTWTCTAAT"
+  # Referências rápidas:
+  # 16S V3-V4:  515F/806R
+  # ITS1:       ITS1F / ITS2
+  # ITS2:       ITS3 / ITS4
+  # p6loop:     P6F / P6R (trnL)
+  # 12S tele02: AAACTCGTGCCAGCMACCGCGGTAA / GGGGTGTGTACAAAGGGCAGGGAC
+
+databases:
+  # 16S:    silva_nr99_v138.2_train_set.fa.gz
+  # ITS:    unite_fungi_*.fa.gz
+  # 12S:    midori ou bold
+  # p6loop: banco customizado (use vsearch_db)
+  dada2_train:    "/mnt/bioinfo/databases/silva/silva_nr99_v138.2_train_set.fa.gz"
+  dada2_species:  "/mnt/bioinfo/databases/silva/silva_species_assignment_v138.2.fa.gz"
+  vsearch_db:     ""          # para marcadores sem banco DADA2 (p6loop, 12S custom)
+
+# ── Etapa 1: Remoção de primers (cutadapt) ────────────────────
+primers:
+  error_rate:     0.1
+  min_overlap:    10
+  discard_untrimmed: true     # descarta reads sem primer (contaminantes)
+  min_length:     100
+
+# ── Etapa 2: QC (fastp) ───────────────────────────────────────
+qc:
+  quality_threshold:  20
+  max_ee_fwd:         2.0     # max expected errors (DADA2 usa isso)
+  max_ee_rev:         2.0
+  extra_flags:        "--disable_adapter_trimming"  # primers já removidos
+
+# ── Etapa 3: DADA2 ───────────────────────────────────────────
+dada2:
+  trunc_len_fwd:  0           # 0 = sem truncamento fixo
+  trunc_len_rev:  0
+  trunc_q:        2
+  max_n:          0
+  chimera_method: "consensus" # consensus | pooled
+
+# ── Etapa 4: Taxonomia ────────────────────────────────────────
+taxonomy:
+  method:         "dada2"     # dada2 | vsearch | blast
+  min_boot:       80          # confiança mínima (DADA2)
+  assign_species: true        # tentativa de atribuição a nível de espécie
+
+# ── Etapa 5: Diversidade ──────────────────────────────────────
+diversity:
+  grouping_variable:  "treatment"  # coluna do samples.csv para comparações
+  rarefaction_depth:  "auto"       # auto = menor profundidade após filtragem
+  min_reads_per_sample: 1000
+  min_reads_per_asv:    2
+  alpha_indices:   ["shannon", "simpson", "chao1", "ace"]
+  beta_methods:    ["bray", "jaccard"]
+  permanova_perm:  999
+
+# ── Saída para RStudio ────────────────────────────────────────
+output:
+  phyloseq_rds:        true   # objeto phyloseq pronto para importar
+  asv_table:           true
+  taxonomy_table:      true
+  diversity_tables:    true   # alpha e beta em CSV
+  metrics_spreadsheet: true
+  multiqc:             true
