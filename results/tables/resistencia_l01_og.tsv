@@ -1,0 +1,450 @@
+og	p	q	pres_alta	pres_baixa	aus_alta	aus_baixa	descricao
+OG0000065	0.601518	1	10	20	2	2	shell||Bromodomain associated
+OG0000177	0.389109	1	11	17	1	5	shell||Phosphotransferase enzyme family
+OG0006494	0.27277	1	12	18	0	4	shell|SSK2|Serine/Threonine protein kinases, catalytic d
+OG0006592	0.136622	1	12	17	0	5	shell||Sugar (and other) transporter
+OG0006889	1	1	11	20	1	2	shell||GAL4-like Zn(II)2Cys6 (or C6 zinc) binuclear 
+OG0007074	0.279412	1	10	21	2	1	core|NAT2|Protein of unknown function (DUF1279)
+OG0007108	0.536765	1	12	19	0	3	shell||
+OG0007118	0.536765	1	12	19	0	3	core|ubc7|Ubiquitin-conjugating enzyme E2, catalytic do
+OG0007181	0.409682	1	8	18	4	4	shell|CTA8|heat shock factor
+OG0007223	0.536765	1	12	19	0	3	shell||Calpain-like thiol protease family.
+OG0007259	0.279412	1	10	21	2	1	shell|SIT4|SIT4 phosphatase-associated protein
+OG0007300	0.136622	1	12	17	0	5	shell||
+OG0007305	0.0403125	1	6	19	6	3	shell||fumarate reductase flavoprotein subunit
+OG0007309	1	1	11	20	1	2	shell|RIC1|RIC1
+OG0007348	0.27277	1	12	18	0	4	shell||Acetyltransferase (GNAT) family
+OG0007365	1	1	11	19	1	3	shell||Universal stress protein family
+OG0007377	0.279412	1	10	21	2	1	shell|mlh1|DNA mismatch repair protein Mlh1 C-terminus
+OG0007384	1	1	11	20	1	2	shell||
+OG0007390	0.634725	1	11	18	1	4	shell||non-haem dioxygenase in morphine synthesis N-
+OG0007435	1	1	11	20	1	2	shell||Amino acid permease
+OG0007445	1	1	10	19	2	3	shell||
+OG0007446	0.377773	1	11	16	1	6	shell|YTA7|AAA domain (Cdc48 subfamily)
+OG0007451	0.438523	1	10	15	2	7	shell||regulator medusa
+OG0007458	1	1	11	20	1	2	shell|URA4|Amidohydrolase
+OG0007460	1	1	11	19	1	3	shell||
+OG0007473	0.377773	1	11	16	1	6	shell||Belongs to the oxygen-dependent FAD-linked ox
+OG0007507	1	1	10	19	2	3	shell||Cyclin
+OG0007518	1	1	10	19	2	3	shell||
+OG0007526	1	1	11	20	1	2	shell|apm1|Adaptor complexes medium subunit family
+OG0007531	0.377773	1	11	16	1	6	shell||Serine aminopeptidase, S33
+OG0007538	0.389109	1	11	17	1	5	shell||NDT80 / PhoG like DNA-binding  family
+OG0007547	0.438523	1	10	15	2	7	shell||Enoyl-(Acyl carrier protein) reductase
+OG0007561	0.389109	1	11	17	1	5	shell||Zinc-binding dehydrogenase
+OG0007588	0.154142	1	8	20	4	2	shell||Zinc finger, C2H2 type
+OG0007604	1	1	11	20	1	2	shell||
+OG0007609	0.438523	1	10	15	2	7	shell|PAK6|Serine/Threonine protein kinases, catalytic d
+OG0007615	0.27277	1	12	18	0	4	shell||Belongs to the peptidase A1 family
+OG0007617	0.601518	1	10	20	2	2	shell||
+OG0007618	0.601518	1	10	20	2	2	shell|RFG1|Hmg box protein
+OG0007620	0.641023	1	9	19	3	3	shell||KR domain
+OG0007636	0.113471	1	11	14	1	8	shell||Transcription factor
+OG0007639	0.438523	1	10	15	2	7	shell||
+OG0007649	0.136622	1	12	17	0	5	shell||
+OG0007652	1	1	11	19	1	3	shell||
+OG0007660	0.0367647	1	9	22	3	0	shell|CBK1|Extension to Ser/Thr-type protein kinases
+OG0007667	0.459036	1	7	16	5	6	shell|YBP1|Uncharacterised protein family, YAP/Alf4/glom
+OG0007679	0.113471	1	11	14	1	8	shell||
+OG0007681	0.67692	1	9	18	3	4	shell||Calcineurin-like phosphoesterase
+OG0007690	0.67692	1	9	18	3	4	shell||cytochrome P450
+OG0007691	0.389109	1	11	17	1	5	shell|RFG1|Hmg box protein
+OG0007693	0.115038	1	9	21	3	1	shell|RMD1|Uncharacterised ACR, YagE family COG1723
+OG0007710	0.27277	1	12	18	0	4	shell||
+OG0007717	1	1	9	15	3	7	shell|RTF1|Plus-3 domain
+OG0007721	1	1	11	20	1	2	shell|RRP46|3' exoribonuclease family, domain 1
+OG0007726	0.601518	1	10	20	2	2	shell||pentatricopeptide repeat protein
+OG0007746	1	1	8	15	4	7	shell||Dienelactone hydrolase family
+OG0007765	0.139731	1	10	12	2	10	shell||Major Facilitator Superfamily
+OG0007779	0.601518	1	10	20	2	2	shell|TAF9|Transcription initiation factor IID, 31kD sub
+OG0007790	0.67692	1	9	18	3	4	shell|APM4|Adaptor complexes medium subunit family
+OG0007797	0.704929	1	9	14	3	8	shell||
+OG0007798	1	1	10	19	2	3	shell||SUZ domain
+OG0007804	0.680909	1	10	16	2	6	shell||SET (Su(var)3-9, Enhancer-of-zeste, Trithorax
+OG0007808	0.71387	1	8	16	4	6	shell|veA|Velvet factor
+OG0007814	0.634725	1	11	18	1	4	shell|GDT1|Uncharacterized protein family UPF0016
+OG0007819	1	1	9	16	3	6	shell||PQ loop repeat
+OG0007827	1	1	11	19	1	3	shell||Ankyrin repeat
+OG0007829	1	1	9	17	3	5	shell||auxin-activated signaling pathway
+OG0007830	0.634725	1	11	18	1	4	shell||Domain in SPla and the RYanodine Receptor.
+OG0007832	0.601518	1	10	20	2	2	shell|TOA1|Transcription factor IIA, alpha/beta subunit
+OG0007838	0.377773	1	11	16	1	6	shell||Major Facilitator Superfamily
+OG0007841	0.71387	1	8	16	4	6	shell||Peptidase C65 Otubain
+OG0007843	0.409682	1	8	18	4	4	shell||C2H2-type zinc finger
+OG0007844	1	1	9	17	3	5	shell||Protein of unknown function (DUF3455)
+OG0007886	1	1	11	20	1	2	shell||ubiquitin family
+OG0007905	0.31926	1	9	20	3	2	shell|TAF12|Transcription initiation factor TFIID subunit
+OG0007910	0.67692	1	9	18	3	4	shell||Domain of unknown function (DUF1996)
+OG0007919	0.291945	1	9	12	3	10	shell||Protein of unknown function (DUF4243)
+OG0007920	0.21025	1	11	15	1	7	shell||
+OG0007921	0.409682	1	8	18	4	4	shell||Lysin motif
+OG0007929	0.00238275	0.534928	3	18	9	4	shell|NDH51|Core subunit of the mitochondrial membrane re
+OG0007941	1	1	8	15	4	7	shell|ADE12|Plays an important role in the de novo pathwa
+OG0007942	0.432211	1	10	14	2	8	shell||
+OG0007945	1	1	10	18	2	4	shell||Lysin motif
+OG0007946	0.475398	1	7	9	5	13	shell||KR domain
+OG0007951	0.27277	1	12	18	0	4	shell||
+OG0007954	1	1	11	19	1	3	shell||RNA recognition motif
+OG0007956	0.27277	1	12	18	0	4	shell||
+OG0007972	0.438523	1	10	15	2	7	shell|PFS2|WD domain, G-beta repeat
+OG0007973	1	1	7	14	5	8	shell|ZRT2|ZIP Zinc transporter
+OG0007974	1	1	11	20	1	2	shell|CCT7|assists the folding of proteins upon ATP hydr
+OG0007979	1	1	7	13	5	9	shell||Mitosis protein DIM1
+OG0007985	1	1	9	17	3	5	shell||
+OG0007987	0.487027	1	6	14	6	8	shell||
+OG0007994	1	1	10	18	2	4	shell|DCP2|Dcp2, box A domain
+OG0007995	1	1	11	19	1	3	shell|EHD3|Belongs to the enoyl-CoA hydratase isomerase 
+OG0007998	0.601518	1	10	20	2	2	shell|RRP46|3' exoribonuclease family, domain 1
+OG0007999	0.0606629	1	11	13	1	9	shell||WH1 domain
+OG0008013	0.432211	1	10	14	2	8	shell||RNA recognition motif
+OG0008018	0.223925	1	7	18	5	4	shell||
+OG0008019	0.71698	1	8	12	4	10	shell||
+OG0008026	1	1	11	19	1	3	shell||Ubiquitin carboxyl-terminal hydrolase
+OG0008045	0.475398	1	5	13	7	9	shell||)transporter
+OG0008048	1	1	10	18	2	4	shell||Sugar (and other) transporter
+OG0008055	0.704929	1	3	8	9	14	shell||OPT oligopeptide transporter protein
+OG0008058	1	1	9	16	3	6	shell||basic region leucin zipper
+OG0008059	0.634725	1	11	18	1	4	shell||Ferroportin1 (FPN1)
+OG0008095	0.724056	1	6	13	6	9	shell||
+OG0008096	0.634725	1	11	18	1	4	shell||
+OG0008097	0.139731	1	10	12	2	10	shell||
+OG0008108	0.252486	1	10	13	2	9	shell||leucine Rich Repeat
+OG0008118	0.432211	1	10	14	2	8	shell||
+OG0008121	0.711343	1	7	15	5	7	shell|NUP57|Nucleoporin complex subunit 54
+OG0008133	0.476413	1	8	11	4	11	shell|GRE2|NAD dependent epimerase/dehydratase family
+OG0008136	0.389109	1	11	17	1	5	shell||
+OG0008144	0.21025	1	11	15	1	7	shell|TPT1|RNA 2'-phosphotransferase, Tpt1 / KptA family
+OG0008145	0.0691209	1	12	16	0	6	shell|CKA2|Serine/Threonine protein kinases, catalytic d
+OG0008148	0.487027	1	6	14	6	8	shell||
+OG0008154	0.687045	1	8	17	4	5	shell||Beta-flanking protein
+OG0008156	0.0707292	1	3	14	9	8	shell|COX10|UbiA prenyltransferase family
+OG0008160	0.137736	1	6	17	6	5	shell|NUP57|Nucleoporin complex subunit 54
+OG0008162	0.687045	1	8	17	4	5	shell||Sterile alpha motif.
+OG0008172	0.151814	1	9	10	3	12	shell||structural constituent of cell wall
+OG0008174	1	1	6	10	6	12	shell||Sugar (and other) transporter
+OG0008175	0.71698	1	8	12	4	10	shell|PDA1|The pyruvate dehydrogenase complex catalyzes 
+OG0008176	0.634725	1	11	18	1	4	shell||Phospholipase D Active site motif
+OG0008177	1	1	6	12	6	10	shell||Mago nashi protein
+OG0008188	1	1	6	11	6	11	shell||
+OG0008189	0.0749633	1	2	11	10	11	shell||PKS_DH
+OG0008192	0.271263	1	7	17	5	5	shell|CHT2|Glycosyl hydrolases family 18
+OG0008195	0.536765	1	12	19	0	3	shell||
+OG0008197	0.31926	1	9	20	3	2	shell||Peptidase dimerisation domain
+OG0008203	1	1	7	14	5	8	shell||
+OG0008205	0.274762	1	3	11	9	11	shell||Cell division control protein 14, SIN compone
+OG0008206	0.711343	1	5	7	7	15	shell||Complex1_LYR-like
+OG0008210	0.536765	1	12	19	0	3	shell||
+OG0008218	1	1	9	17	3	5	shell|RHO3|Rho (Ras homology) subfamily of Ras-like smal
+OG0008219	1	1	11	20	1	2	shell|NUXM|NADH-ubiquinone oxidoreductase 21 kDa subunit
+OG0008220	0.71387	1	4	6	8	16	shell|SLD5|The GINS complex plays an essential role in t
+OG0008221	0.0299431	1	3	15	9	7	shell||HNH endonuclease
+OG0008227	1	1	6	10	6	12	shell||
+OG0008236	0.67692	1	9	18	3	4	shell||RING-like zinc finger
+OG0008243	0.0749633	1	10	11	2	11	shell||
+OG0008260	0.252486	1	10	13	2	9	shell||Major Facilitator Superfamily
+OG0008266	1	1	10	19	2	3	shell||WH1 domain
+OG0008270	1	1	10	18	2	4	shell|ACT1|Actin
+OG0008280	0.296648	1	8	10	4	12	shell||Transmembrane amino acid transporter protein
+OG0008283	0.71387	1	8	16	4	6	shell||
+OG0008284	0.281753	1	8	9	4	13	shell|EXO1|Xeroderma pigmentosum G I-region
+OG0008289	0.704929	1	9	14	3	8	shell||Anaphase-promoting complex subunit 11 RING-H2
+OG0008302	0.461757	1	6	7	6	15	shell||Thermotolerance protein
+OG0008306	1	1	11	19	1	3	shell||Transcription initiation factor TFIID compone
+OG0008311	1	1	11	19	1	3	shell|CRP1|Glycogen recognition site of AMP-activated pr
+OG0008316	1	1	1	3	11	19	shell||Belongs to the Ca(2 ) cation antiporter (CaCA
+OG0008317	1	1	6	12	6	10	shell||
+OG0008318	1	1	5	9	7	13	shell||Glycosyl hydrolase family 61
+OG0008319	0.465023	1	3	9	9	13	shell|YND1|GDA1/CD39 (nucleoside phosphatase) family
+OG0008321	1	1	10	18	2	4	shell|CCT3|assists the folding of proteins upon ATP hydr
+OG0008324	1	1	2	5	10	17	shell||Transcription factor cmr1
+OG0008325	0.274762	1	3	11	9	11	shell||Ubiquitin carboxyl-terminal hydrolase
+OG0008327	1	1	3	7	9	15	shell|RHO3|Rho (Ras homology) subfamily of Ras-like smal
+OG0008333	0.634725	1	11	18	1	4	shell||
+OG0008336	1	1	7	14	5	8	shell||PKS_DH
+OG0008347	1	1	5	8	7	14	shell||
+OG0008350	0.687045	1	8	17	4	5	shell|PFS2|WD domain, G-beta repeat
+OG0008356	1	1	11	20	1	2	shell||PP-loop family
+OG0008357	0.641023	1	9	19	3	3	shell||PSP1 C-terminal conserved region
+OG0008371	1	1	4	8	8	14	shell||
+OG0008372	0.461757	1	6	15	6	7	shell||Sugar (and other) transporter
+OG0008374	0.279412	1	10	21	2	1	shell||Clr5 domain
+OG0008375	0.728897	1	7	11	5	11	shell||U1 small nuclear ribonucleoprotein of 70kDa M
+OG0008378	1	1	11	20	1	2	shell|PKC1|Rho effector or protein kinase C-related kina
+OG0008381	0.0751624	1	8	7	4	15	shell||
+OG0008386	1	1	7	12	5	10	shell|SEC10|Exocyst complex component Sec10
+OG0008388	0.291945	1	9	12	3	10	shell||
+OG0008394	1	1	5	8	7	14	shell||FAD dependent oxidoreductase
+OG0008398	0.465023	1	3	9	9	13	shell||ATPase family associated with various cellula
+OG0008399	1	1	10	17	2	5	shell||Fungal specific transcription factor domain
+OG0008402	0.465023	1	3	9	9	13	shell||Duf974 domain-containing protein
+OG0008403	0.137736	1	6	5	6	17	shell||Sugar (and other) transporter
+OG0008404	0.71387	1	4	6	8	16	shell|ncs1|EF-hand domain
+OG0008408	0.271263	1	7	17	5	5	shell||Sugar (and other) transporter
+OG0008409	0.720682	1	7	10	5	12	shell||Fungal specific transcription factor domain
+OG0008413	0.0662338	1	2	12	10	10	shell||NDT80 / PhoG like DNA-binding  family
+OG0008415	1	1	1	3	11	19	shell|REV1|Deoxycytidyl transferase involved in DNA repa
+OG0008419	1	1	11	19	1	3	shell||GAL4-like Zn(II)2Cys6 (or C6 zinc) binuclear 
+OG0008421	1	1	10	17	2	5	shell|ssr3|SWIB/MDM2 domain
+OG0008422	0.136622	1	12	17	0	5	shell||Adaptins are components of the adaptor comple
+OG0008428	0.274762	1	3	11	9	11	shell||
+OG0008429	0.724056	1	6	9	6	13	shell||GAL4-like Zn(II)2Cys6 (or C6 zinc) binuclear 
+OG0008431	1	1	11	20	1	2	shell||ATP-NAD kinase
+OG0008435	0.271263	1	5	5	7	17	shell|CBK1|Extension to Ser/Thr-type protein kinases
+OG0008447	0.459036	1	5	6	7	16	shell||Chitin recognition protein
+OG0008448	1	1	3	6	9	16	shell||
+OG0008454	1	1	1	3	11	19	shell||Sugar (and other) transporter
+OG0008455	0.113471	1	1	8	11	14	shell||
+OG0008456	0.211338	1	4	3	8	19	shell||
+OG0008458	1	1	10	19	2	3	shell||Folliculin-interacting protein N-terminus
+OG0008461	0.279412	1	10	21	2	1	shell||Belongs to the major facilitator superfamily.
+OG0008471	1	1	2	4	10	18	shell||
+OG0008475	1	1	6	10	6	12	shell||Ornithine decarboxylase antizyme
+OG0008479	0.291945	1	9	12	3	10	shell||Proline-rich nuclear receptor coactivator mot
+OG0008483	0.291945	1	3	10	9	12	shell|OSH3|Pleckstrin homology domain
+OG0008486	0.634725	1	1	4	11	18	shell||
+OG0008487	1	1	2	4	10	18	shell|MRPL27|Mitochondrial ribosomal protein L27
+OG0008489	0.711343	1	5	7	7	15	shell|YIP3|prenylated rab acceptor 1
+OG0008495	0.720682	1	5	12	7	10	shell||Fungal specific transcription factor domain
+OG0008497	0.727088	1	4	9	8	13	shell|NEO1|Phospholipid-translocating ATPase N-terminal
+OG0008499	0.432211	1	2	8	10	14	shell|ECM16|Helicase associated domain (HA2)  Add an anno
+OG0008504	0.704929	1	3	8	9	14	shell||oxidation-reduction process
+OG0008507	1	1	4	7	8	15	shell||
+OG0008523	0.476413	1	8	11	4	11	shell||
+OG0008526	0.291945	1	3	10	9	12	shell||Protein kinase domain
+OG0008527	0.601518	1	10	20	2	2	shell||Fungal specific transcription factor domain
+OG0008530	1	1	5	8	7	14	shell||
+OG0008534	0.139731	1	2	10	10	12	shell||Universal stress protein family
+OG0008536	0.0749633	1	10	11	2	11	shell||A Receptor for Ubiquitination Targets
+OG0008538	1	1	5	9	7	13	shell||Spt20 family
+OG0008564	0.711343	1	7	15	5	7	shell||
+OG0008580	0.389109	1	11	17	1	5	shell||
+OG0008585	0.536765	1	12	19	0	3	shell||Sugar (and other) transporter
+OG0008587	1	1	5	10	7	12	shell||Nucleoporin FG repeat region
+OG0008592	1	1	1	2	11	20	shell||SUZ domain
+OG0008603	0.389109	1	1	5	11	17	shell|ELP4|PAXNEB protein
+OG0008615	1	1	10	18	2	4	shell||FAD binding domain
+OG0008621	0.0367647	1	3	0	9	22	shell|HOF1|Fes/CIP4 homology domain
+OG0008629	0.601518	1	2	2	10	20	shell||
+OG0008631	1	1	11	20	1	2	shell||Acetylxylan esterase
+OG0008642	0.163269	1	5	15	7	7	shell||
+OG0008647	0.151415	1	8	8	4	14	shell||
+OG0008651	0.634725	1	1	4	11	18	shell||Basic region leucine zipper
+OG0008653	1	1	3	5	9	17	shell||Apc15p protein
+OG0008654	1	1	11	20	1	2	shell||Nse1 non-SMC component of SMC5-6 complex
+OG0008660	1	1	3	5	9	17	shell||Domain in SPla and the RYanodine Receptor.
+OG0008664	0.487027	1	6	14	6	8	shell||
+OG0008665	0.28827	1	7	8	5	14	shell||Major Facilitator Superfamily
+OG0008670	0.223925	1	5	4	7	18	shell||
+OG0008686	0.265457	1	6	16	6	6	shell|rcd1|Cell differentiation family, Rcd1-like
+OG0008694	0.728897	1	5	11	7	11	shell||
+OG0008696	1	1	3	5	9	17	shell||
+OG0008699	0.0691209	1	0	6	12	16	shell||Nnf1
+OG0008710	0.487027	1	6	8	6	14	shell||Transmembrane amino acid transporter protein
+OG0008729	1	1	10	19	2	3	shell||
+OG0008730	0.115038	1	3	1	9	21	shell||Major Facilitator Superfamily
+OG0008733	1	1	5	10	7	12	shell||
+OG0008736	1	1	5	8	7	14	shell||alpha/beta hydrolase fold
+OG0008741	0.536765	1	12	19	0	3	shell||
+OG0008742	0.389109	1	1	5	11	17	shell||Telomerase activating protein Est1
+OG0008744	0.536765	1	12	19	0	3	shell|LSK1|Serine/Threonine protein kinases, catalytic d
+OG0008753	0.252486	1	2	9	10	13	shell||histone-like transcription factor and archaea
+OG0008781	0.438523	1	2	7	10	15	shell||DNA polymerase X family
+OG0008785	0.687045	1	8	17	4	5	shell|MMT2|Cation efflux family
+OG0008787	0.113471	1	1	8	11	14	shell||Forkhead domain
+OG0008789	1	1	2	5	10	17	shell||Diaphanous FH3 Domain
+OG0008801	0.67692	1	3	4	9	18	shell||RING-like zinc finger
+OG0008825	1	1	1	2	11	20	cloud||
+OG0008837	0.727088	1	4	9	8	13	shell||PKS_DH
+OG0008852	0.252486	1	2	9	10	13	shell||Putative RRM domain
+OG0008857	1	1	1	2	11	20	shell|NHP6|HMG-box domain
+OG0008869	1	1	2	4	10	18	shell||Alcohol acetyltransferase
+OG0008878	0.536765	1	12	19	0	3	shell||Protein of unknown function (DUF3638)
+OG0008891	0.71698	1	4	10	8	12	shell||
+OG0008892	0.211338	1	4	3	8	19	shell|PFS2|WD domain, G-beta repeat
+OG0008899	1	1	2	5	10	17	shell||SUZ domain
+OG0008926	0.459036	1	7	16	5	6	shell||PAPA-1-like conserved region
+OG0008929	0.475398	1	5	13	7	9	shell|YEA4|UAA transporter family
+OG0008936	0.634725	1	11	18	1	4	shell||WD40 repeats
+OG0008938	0.377773	1	11	16	1	6	shell||
+OG0008941	0.139731	1	2	10	10	12	shell|BUD5|Guanine nucleotide exchange factor for Ras-li
+OG0008943	0.00182538	0.534928	0	12	12	10	shell|SIN3|Histone deacetylase (HDAC) interacting
+OG0008965	0.115038	1	9	21	3	1	shell||
+OG0008967	0.536765	1	12	19	0	3	shell||Major Facilitator Superfamily
+OG0008968	0.252486	1	2	9	10	13	shell||Dihydrodipicolinate synthetase family
+OG0008970	0.67692	1	3	4	9	18	cloud||involucrin repeat protein
+OG0008975	1	1	11	19	1	3	shell||Protein tyrosine kinase
+OG0008980	0.438523	1	2	7	10	15	shell||chromatin binding
+OG0008982	1	1	2	5	10	17	shell||basic region leucin zipper
+OG0008983	0.67692	1	3	4	9	18	shell|YOR1|ABC transporter transmembrane region
+OG0008984	0.536765	1	12	19	0	3	shell||COG (conserved oligomeric Golgi) complex comp
+OG0009000	0.27277	1	0	4	12	18	cloud||Proline-rich nuclear receptor coactivator mot
+OG0009007	1	1	2	5	10	17	shell|ERT1|GAL4-like Zn(II)2Cys6 (or C6 zinc) binuclear 
+OG0009027	0.536765	1	0	3	12	19	cloud||
+OG0009029	0.252486	1	2	9	10	13	shell||YCII-related domain
+OG0009031	1	1	1	3	11	19	cloud||Protein of unknown function (DUF1365)
+OG0009037	0.71698	1	4	10	8	12	shell||
+OG0009038	0.71387	1	4	6	8	16	shell||Cytochrome P450
+OG0009039	0.728897	1	7	11	5	11	shell||
+OG0009041	1	1	3	6	9	16	shell||
+OG0009042	0.113471	1	1	8	11	14	shell||
+OG0009043	0.265457	1	6	16	6	6	shell||
+OG0009046	0.113471	1	1	8	11	14	shell||Fungal specific transcription factor domain
+OG0009047	0.139731	1	2	10	10	12	shell|URA6|Catalyzes the phosphorylation of pyrimidine n
+OG0009067	0.465023	1	9	13	3	9	shell||Taurine catabolism dioxygenase TauD, TfdA fam
+OG0009072	1	1	1	2	11	20	cloud||Survival protein SurE
+OG0009086	1	1	9	17	3	5	shell|STE20|P21-Rho-binding domain
+OG0009090	1	1	1	2	11	20	cloud||Thiamine pyrophosphate enzyme, C-terminal TPP
+OG0009092	1	1	1	2	11	20	cloud||
+OG0009093	1	1	1	2	11	20	cloud||Phosphoribosyl-aminoimidazole-succinocarboxam
+OG0009100	0.21025	1	1	7	11	15	shell||PHD-finger
+OG0009102	0.0367647	1	9	22	3	0	shell||Major Facilitator Superfamily
+OG0009103	0.409682	1	4	4	8	18	shell||
+OG0009104	0.113471	1	1	8	11	14	shell||
+OG0009105	0.112208	1	6	4	6	18	shell|NDE1|NUDE protein, C-terminal conserved region
+OG0009106	1	1	1	3	11	19	cloud|mug81|Sec63 Brl domain
+OG0009114	0.680909	1	2	6	10	16	cloud|NOP9|RNA-binding nucleolar protein required for pr
+OG0009132	1	1	2	3	10	19	cloud||pentatricopeptide repeat protein
+OG0009137	1	1	3	5	9	17	cloud|TPT1|RNA 2'-phosphotransferase, Tpt1 / KptA family
+OG0009143	0.136622	1	0	5	12	17	cloud|CKA2|Serine/Threonine protein kinases, catalytic d
+OG0009144	1	1	2	4	10	18	cloud|CKA2|Serine/Threonine protein kinases, catalytic d
+OG0009146	0.438523	1	2	7	10	15	cloud||Mitochondrial carrier protein
+OG0009148	0.27277	1	0	4	12	18	cloud||fungal zn binuclear cluster domain containing
+OG0009149	0.389109	1	1	5	11	17	cloud|FZO1|Dynamin family
+OG0009150	1	1	1	2	11	20	cloud||
+OG0009156	0.377773	1	1	6	11	16	cloud||Methyltransferase domain
+OG0009157	0.409682	1	4	4	8	18	cloud||
+OG0009158	0.536765	1	0	3	12	19	cloud||
+OG0009159	0.634725	1	1	4	11	18	cloud||Chromosome segregation atpase
+OG0009162	1	1	1	3	11	19	cloud||WD domain, G-beta repeat
+OG0009163	0.136622	1	0	5	12	17	cloud||Survival motor neuron (SMN) interacting prote
+OG0009164	0.536765	1	0	3	12	19	cloud||
+OG0009165	1	1	1	3	11	19	cloud||FAD binding domain
+OG0009168	1	1	1	3	11	19	cloud|apm1|Adaptor complexes medium subunit family
+OG0009179	0.389109	1	1	5	11	17	cloud||Proline-rich nuclear receptor coactivator mot
+OG0009193	0.27277	1	0	4	12	18	cloud||CAP_GLY
+OG0009196	1	1	1	3	11	19	cloud||GAL4-like Zn(II)2Cys6 (or C6 zinc) binuclear 
+OG0009201	1	1	1	3	11	19	cloud||Adaptins are components of the adaptor comple
+OG0009202	0.536765	1	0	3	12	19	cloud||
+OG0009212	1	1	2	5	10	17	cloud||
+OG0009213	1	1	2	3	10	19	cloud|DID4|Snf7
+OG0009214	0.634725	1	1	4	11	18	cloud||
+OG0009215	1	1	1	2	11	20	cloud||
+OG0009218	0.601518	1	2	2	10	20	cloud||Cell wall proline rich protein
+OG0009219	0.536765	1	0	3	12	19	cloud||Belongs to the major facilitator superfamily.
+OG0009223	0.634725	1	1	4	11	18	cloud||Protein kinase domain
+OG0009224	0.27277	1	0	4	12	18	cloud|SWE1|Protein tyrosine kinase
+OG0009225	0.389109	1	1	5	11	17	cloud||GAL4-like Zn(II)2Cys6 (or C6 zinc) binuclear 
+OG0009226	1	1	2	4	10	18	cloud||ARID/BRIGHT DNA binding domain
+OG0009228	0.438523	1	2	7	10	15	cloud|cbc1|MIF4G like
+OG0009229	0.279412	1	2	1	10	21	cloud||FAD binding domain
+OG0009244	0.634725	1	1	4	11	18	cloud|ubp10|Zn-finger in ubiquitin-hydrolases and other p
+OG0009245	0.67692	1	3	4	9	18	cloud||Clr5 domain
+OG0009265	1	1	1	3	11	19	cloud||RNA recognition motif
+OG0009279	1	1	2	3	10	19	cloud|gsk3|Belongs to the protein kinase superfamily
+OG0009281	0.27277	1	0	4	12	18	cloud||
+OG0009283	0.0136426	1	5	1	7	21	cloud||TEA/ATTS domain family
+OG0009284	1	1	2	3	10	19	cloud||TEA/ATTS domain family
+OG0009285	0.601518	1	2	2	10	20	cloud||
+OG0009292	1	1	1	2	11	20	cloud|chsD|Chitin synthase
+OG0009300	0.601518	1	2	2	10	20	cloud||GAL4-like Zn(II)2Cys6 (or C6 zinc) binuclear 
+OG0009301	0.279412	1	2	1	10	21	cloud||N-terminal domain of NWD NACHT-NTPase
+OG0009303	1	1	2	4	10	18	cloud||transporter
+OG0009305	0.634725	1	1	4	11	18	cloud||iron ion binding
+OG0009310	0.634725	1	1	4	11	18	cloud|SSD1|RNB
+OG0009313	1	1	1	3	11	19	cloud|ssr3|SWIB/MDM2 domain
+OG0009314	0.154142	1	4	2	8	20	cloud|vps901|Domain present in VPS9
+OG0009317	0.377773	1	1	6	11	16	cloud||Fungal specific transcription factor domain
+OG0009319	1	1	1	2	11	20	cloud||Myb-like DNA-binding domain
+OG0009320	0.389109	1	1	5	11	17	cloud||Nucleoporin FG repeat region
+OG0009322	0.536765	1	0	3	12	19	cloud||Proline-rich nuclear receptor coactivator mot
+OG0009335	1	1	2	3	10	19	cloud|RMD1|Uncharacterised ACR, YagE family COG1723
+OG0009343	0.634725	1	1	4	11	18	cloud||short chain dehydrogenase
+OG0009347	0.536765	1	0	3	12	19	cloud|FAS1|4'-phosphopantetheinyl transferase superfamil
+OG0009365	0.136622	1	0	5	12	17	cloud||ankyrin repeats
+OG0009370	0.136622	1	0	5	12	17	cloud||Forkhead associated domain
+OG0009374	0.279412	1	2	1	10	21	cloud||
+OG0009375	0.536765	1	0	3	12	19	cloud|MET6|Cobalamin-independent synthase, N-terminal do
+OG0009382	0.536765	1	0	3	12	19	cloud||
+OG0009384	0.536765	1	0	3	12	19	cloud||
+OG0009387	0.27277	1	0	4	12	18	cloud||Pleckstrin homology domain.
+OG0009389	1	1	1	2	11	20	cloud||Major Facilitator Superfamily
+OG0009393	1	1	2	3	10	19	cloud|PHO80|Cyclin
+OG0009394	0.641023	1	3	3	9	19	cloud||Sodium/hydrogen exchanger family
+OG0009395	1	1	1	3	11	19	cloud||Phosphoglycerate mutase family
+OG0009400	1	1	1	3	11	19	cloud||
+OG0009403	0.67692	1	3	4	9	18	cloud|MNN2|Mannosyltransferase putative
+OG0009404	0.634725	1	1	4	11	18	cloud|KIN2|Kinase associated domain 1
+OG0009405	0.389109	1	1	5	11	17	cloud||Ubiquitin-interacting motif.
+OG0009418	1	1	1	3	11	19	cloud||Fungal specific transcription factor domain
+OG0009424	0.641023	1	3	3	9	19	cloud|ATG26|domain in glucosyltransferases, myotubularins
+OG0009425	0.389109	1	1	5	11	17	cloud|NOP9|RNA-binding nucleolar protein required for pr
+OG0009433	0.115038	1	3	1	9	21	cloud||
+OG0009437	1	1	1	3	11	19	cloud||
+OG0009451	1	1	2	3	10	19	cloud||A Receptor for Ubiquitination Targets
+OG0009453	0.601518	1	2	2	10	20	cloud|TRM61|tRNA methyltransferase complex GCD14 subunit
+OG0009469	1	1	1	2	11	20	cloud|POL5|DNA polymerase phi
+OG0009476	0.536765	1	0	3	12	19	cloud|RPA190|DNA-dependent RNA polymerase catalyzes the tr
+OG0009478	0.536765	1	0	3	12	19	cloud|COX11|oxidase assembly protein
+OG0009480	1	1	1	2	11	20	cloud||Sugar (and other) transporter
+OG0009484	0.536765	1	0	3	12	19	cloud||
+OG0009485	1	1	1	3	11	19	cloud|NEO1|Phospholipid-translocating ATPase N-terminal
+OG0009489	0.27277	1	0	4	12	18	cloud|SWD3|WD domain, G-beta repeat
+OG0009493	0.536765	1	0	3	12	19	cloud||bromo domain
+OG0009496	1	1	1	3	11	19	cloud||Sec7 domain
+OG0009504	0.115038	1	3	1	9	21	cloud||Stabilization of polarity axis
+OG0009505	1	1	1	2	11	20	cloud||Sugar (and other) transporter
+OG0009516	0.601518	1	2	2	10	20	cloud|COG4|COG4 transport protein
+OG0009521	1	1	1	3	11	19	cloud||
+OG0009529	1	1	1	2	11	20	cloud|HOF1|Fes/CIP4 homology domain
+OG0009545	0.279412	1	2	1	10	21	cloud||PSP1 C-terminal conserved region
+OG0009577	1	1	1	2	11	20	cloud||Major Facilitator Superfamily
+OG0009580	1	1	1	2	11	20	cloud||CoA binding domain
+OG0009581	1	1	1	2	11	20	cloud|COX19|Cytochrome c oxidase assembly protein COX19
+OG0009599	0.536765	1	0	3	12	19	cloud||
+OG0009602	0.536765	1	0	3	12	19	cloud||Fungal specific transcription factor domain
+OG0009603	1	1	1	3	11	19	cloud||
+OG0009606	0.115038	1	3	1	9	21	cloud||PPR repeat family
+OG0009609	0.115038	1	3	1	9	21	cloud|PEX5|Peroxisomal targeting signal receptor
+OG0009614	0.536765	1	0	3	12	19	cloud||
+OG0009615	1	1	1	3	11	19	cloud|PMT1|MIR domain
+OG0009620	1	1	1	3	11	19	cloud||Fungal specific transcription factor domain
+OG0009621	1	1	1	3	11	19	cloud||pinin/SDK/memA/ protein conserved region
+OG0009622	0.536765	1	0	3	12	19	cloud|taf6|TATA box binding protein associated factor
+OG0009623	0.536765	1	0	3	12	19	cloud||
+OG0009629	0.27277	1	0	4	12	18	cloud|SRP54|Binds to the signal sequence of presecretory 
+OG0009632	1	1	1	2	11	20	cloud|samB|MYND finger
+OG0009634	0.601518	1	2	2	10	20	cloud|GDT1|Uncharacterized protein family UPF0016
+OG0009639	0.279412	1	2	1	10	21	cloud|apm1|Adaptor complexes medium subunit family
+OG0009651	0.536765	1	0	3	12	19	cloud||mRNA cap-binding component of the eukaryotic 
+OG0009671	0.279412	1	2	1	10	21	cloud||
+OG0009674	0.279412	1	2	1	10	21	cloud||Rad4 beta-hairpin domain 1
+OG0009678	1	1	1	2	11	20	cloud||Belongs to the major facilitator superfamily.
+OG0009683	0.279412	1	2	1	10	21	cloud||Protein of unknown function (DUF3295)
+OG0009704	0.536765	1	0	3	12	19	cloud||
+OG0009719	1	1	1	3	11	19	cloud||Major Facilitator Superfamily
+OG0009734	1	1	1	2	11	20	cloud||
+OG0009746	0.536765	1	0	3	12	19	cloud||
+OG0009771	0.536765	1	0	3	12	19	cloud||Guanine nucleotide exchange factor for Rho/Ra
+OG0009772	0.536765	1	0	3	12	19	cloud|LHS1|Hsp70 protein
+OG0009773	1	1	1	3	11	19	cloud||Transcriptional repressor TCF25
+OG0009774	1	1	1	3	11	19	cloud||
+OG0009776	0.536765	1	0	3	12	19	cloud||Serine Threonine protein
+OG0009777	1	1	1	3	11	19	cloud||DNA binding
+OG0009778	0.601518	1	2	2	10	20	cloud|IES6|YL1 nuclear protein C-terminal domain
+OG0009779	1	1	1	2	11	20	cloud||Cyclin, N-terminal domain
+OG0009787	1	1	1	2	11	20	cloud||
+OG0009788	1	1	1	2	11	20	cloud||LYAR-type C2HC zinc finger
+OG0009790	1	1	1	2	11	20	cloud|SEC8|Vacuolar-sorting protein 54, of GARP complex
+OG0009813	1	1	1	2	11	20	cloud||mRNA cap-binding component of the eukaryotic 
+OG0009833	0.279412	1	2	1	10	21	cloud||RING-like zinc finger
+OG0009835	0.536765	1	0	3	12	19	cloud||Clr5 domain
+OG0009849	0.536765	1	0	3	12	19	cloud||
+OG0009862	0.0367647	1	3	0	9	22	cloud||PSP1 C-terminal conserved region
+OG0009916	0.536765	1	0	3	12	19	cloud||Major Facilitator Superfamily
+OG0010030	0.279412	1	2	1	10	21	cloud||Dynamin, GTPase
+OG0010031	1	1	1	2	11	20	cloud|MAP2|Cotranslationally removes the N-terminal meth
+OG0010032	1	1	1	2	11	20	cloud|SPO7|Spo7-like protein
+OG0010033	0.536765	1	0	3	12	19	cloud|PMR1|Cation transporter/ATPase, N-terminus
+OG0010059	1	1	1	2	11	20	cloud||
+OG0010064	1	1	1	2	11	20	cloud||
+OG0010073	0.536765	1	0	3	12	19	cloud||In Between Ring fingers

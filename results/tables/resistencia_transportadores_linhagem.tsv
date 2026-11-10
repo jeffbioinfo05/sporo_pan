@@ -1,0 +1,89 @@
+og	classe	n_genomas	padrao_presenca	ausente_em	descricao	pfam
+OG0001297	shell	59	intra-linhagem	L02 3/7; L03 3/6; L04 1/4; L05 2/3; L07 1/1; L08 1/1; L09 1/1	ABC transporter transmembrane region	ABC_membrane,ABC_tran
+OG0006592	shell	65	intra-linhagem	L01 6/47	Sugar (and other) transporter	Sugar_tr
+OG0007017	shell	67	restrita por linhagem	L05 3/3; L06 1/1	Belongs to the major facilitator superfamily. Suga	Sugar_tr
+OG0007041	shell	67	restrita por linhagem	L05 3/3; L07 1/1	Sugar (and other) transporter	Sugar_tr
+OG0007176	shell	63	intra-linhagem	L02 1/7; L03 6/6; L08 1/1	Sugar (and other) transporter	Sugar_tr
+OG0007183	shell	67	restrita por linhagem	L05 3/3; L06 1/1	Transporter	MFS_1
+OG0007322	shell	67	restrita por linhagem	L05 3/3; L08 1/1	Ion channel regulatory protein UNC-93	MFS_1,UNC-93
+OG0007381	shell	63	intra-linhagem	L02 1/7; L03 4/6; L04 1/4; L06 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0007438	shell	64	restrita por linhagem	L03 6/6; L06 1/1	Sugar (and other) transporter	Sugar_tr
+OG0007478	shell	67	restrita por linhagem	L05 3/3; L06 1/1	ABC transporter B family member	ABC_membrane,ABC_tran
+OG0007536	shell	64	intra-linhagem	L02 6/7; L06 1/1	Major Facilitator Superfamily	MFS_1
+OG0007542	shell	62	restrita por linhagem	L04 4/4; L05 3/3; L07 1/1; L08 1/1	Major Facilitator Superfamily	MFS_1
+OG0007558	shell	63	restrita por linhagem	L04 4/4; L05 3/3; L07 1/1	Major Facilitator Superfamily	MFS_1
+OG0007579	shell	66	intra-linhagem	L02 1/7; L05 3/3; L06 1/1	Sugar (and other) transporter	Sugar_tr
+OG0007592	shell	65	intra-linhagem	L04 4/4; L05 2/3	Sugar (and other) transporter	Sugar_tr
+OG0007659	shell	58	intra-linhagem	L02 2/7; L03 6/6; L04 3/4; L07 1/1; L08 1/1	Major Facilitator Superfamily	MFS_1
+OG0007669	shell	59	intra-linhagem	L02 5/7; L03 4/6; L04 3/4	Major Facilitator Superfamily	MFS_1
+OG0007674	shell	65	restrita por linhagem	L03 6/6	ABC transporter transmembrane region	ABC_membrane,ABC_tran
+OG0007684	shell	58	restrita por linhagem	L02 7/7; L04 4/4; L07 1/1; L08 1/1	ABC-2 type transporter	ABC2_membrane,ABC_tran,ABC_trans_N,PDR_CDR
+OG0007705	shell	58	intra-linhagem	L02 4/7; L03 3/6; L05 3/3; L07 1/1; L08 1/1; L09 1/1	Major facilitator superfamily transporter	MFS_1
+OG0007765	shell	58	intra-linhagem	L01 12/47; L05 1/3	Major Facilitator Superfamily	MFS_1
+OG0007838	shell	57	intra-linhagem	L01 9/47; L02 1/7; L03 1/6; L04 1/4; L06 1/1; L07 1/1	Major Facilitator Superfamily	MFS_1
+OG0007839	shell	55	restrita por linhagem	L02 7/7; L03 6/6; L05 3/3	Major Facilitator Superfamily	MFS_1
+OG0007902	shell	54	restrita por linhagem	L02 7/7; L03 6/6; L05 3/3; L06 1/1	Ion channel regulatory protein UNC-93	MFS_1,UNC-93
+OG0007944	shell	54	restrita por linhagem	L02 7/7; L03 6/6; L05 3/3; L06 1/1	Belongs to the ABC transporter superfamily. ABCG f	ABC2_membrane,ABC_tran,ABC_trans_N,PDR_CDR
+OG0007949	shell	66	intra-linhagem	L03 2/6; L05 1/3; L08 1/1; L09 1/1	Sugar (and other) transporter	Sugar_tr
+OG0008000	shell	66	intra-linhagem	L02 1/7; L05 3/3; L06 1/1	Major Facilitator Superfamily	MFS_1
+OG0008045	shell	47	intra-linhagem	L01 19/47; L03 3/6; L05 1/3; L09 1/1	)transporter	MFS_1,Zn_clus
+OG0008048	shell	45	intra-linhagem	L01 13/47; L02 3/7; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1	Sugar (and other) transporter	Sugar_tr
+OG0008052	shell	67	intra-linhagem	L01 3/47; L06 1/1	Major Facilitator Superfamily	MFS_1
+OG0008174	shell	43	intra-linhagem	L01 18/47; L02 5/7; L03 2/6; L04 3/4	Sugar (and other) transporter	Sugar_tr
+OG0008260	shell	52	intra-linhagem	L01 12/47; L02 5/7; L03 2/6	Major Facilitator Superfamily	MFS_1
+OG0008372	shell	41	intra-linhagem	L01 18/47; L02 6/7; L03 2/6; L04 2/4; L05 1/3; L07 1/1	Sugar (and other) transporter	Sugar_tr
+OG0008403	shell	28	intra-linhagem	L01 31/47; L02 3/7; L03 4/6; L04 1/4; L05 2/3; L07 1/1; L09 1/1	Sugar (and other) transporter	MFS_1
+OG0008408	shell	39	intra-linhagem	L01 21/47; L02 1/7; L03 3/6; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Sugar (and other) transporter	Sugar_tr
+OG0008427	shell	29	intra-linhagem	L01 42/47	Sugar (and other) transporter	Sugar_tr
+OG0008454	shell	25	intra-linhagem	L01 42/47; L05 2/3; L06 1/1; L09 1/1	Sugar (and other) transporter	MFS_1
+OG0008461	shell	67	intra-linhagem	L01 4/47	Belongs to the major facilitator superfamily. Suga	Sugar_tr
+OG0008494	shell	26	intra-linhagem	L01 45/47	Major Facilitator Superfamily	MFS_1
+OG0008585	shell	57	intra-linhagem	L01 4/47; L02 6/7; L05 2/3; L08 1/1; L09 1/1	Sugar (and other) transporter	MFS_1
+OG0008665	shell	43	intra-linhagem	L01 19/47; L02 1/7; L03 3/6; L04 3/4; L05 2/3	Major Facilitator Superfamily	MFS_1
+OG0008669	shell	61	restrita por linhagem	L02 7/7; L05 3/3	Sugar (and other) transporter	Sugar_tr
+OG0008730	shell	18	intra-linhagem	L01 34/47; L02 6/7; L03 6/6; L04 3/4; L05 3/3; L08 1/1	Major Facilitator Superfamily	MFS_1
+OG0008790	shell	15	intra-linhagem	L01 46/47; L03 5/6; L05 3/3; L06 1/1; L09 1/1	ABC-2 type transporter	ABC2_membrane,ABC_tran,ABC_trans_N,PDR_CDR
+OG0008794	shell	16	intra-linhagem	L01 47/47; L02 1/7; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	ABC transporter transmembrane region	ABC_membrane,ABC_tran
+OG0008967	shell	55	intra-linhagem	L01 10/47; L02 1/7; L05 3/3; L06 1/1; L07 1/1	Major Facilitator Superfamily	MFS_1
+OG0008971	shell	49	intra-linhagem	L02 7/7; L03 5/6; L04 4/4; L05 2/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0008983	shell	13	intra-linhagem	L01 40/47; L02 4/7; L03 4/6; L04 3/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	ABC transporter transmembrane region	ABC_membrane,ABC_tran
+OG0009094	cloud	10	intra-linhagem	L01 45/47; L02 5/7; L03 5/6; L04 3/4; L06 1/1; L07 1/1; L09 1/1	permease	MFS_1
+OG0009102	shell	40	intra-linhagem	L01 8/47; L02 7/7; L03 6/6; L04 4/4; L05 2/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009188	cloud	7	intra-linhagem	L01 47/47; L02 7/7; L03 5/6; L04 4/4; L08 1/1	ABC transporter transmembrane region	ABC_membrane,ABC_tran
+OG0009219	cloud	8	intra-linhagem	L01 42/47; L02 6/7; L03 5/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1	Belongs to the major facilitator superfamily. Suga	Sugar_tr
+OG0009238	cloud	7	intra-linhagem	L01 46/47; L02 1/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009282	cloud	7	intra-linhagem	L01 45/47; L02 6/7; L03 5/6; L04 3/4; L05 2/3; L06 1/1; L07 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009303	cloud	8	intra-linhagem	L01 41/47; L02 7/7; L03 6/6; L04 3/4; L05 3/3; L06 1/1; L08 1/1; L09 1/1	transporter	MFS_1
+OG0009389	cloud	7	intra-linhagem	L01 42/47; L02 6/7; L03 5/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009448	cloud	6	intra-linhagem	L01 47/47; L02 5/7; L03 4/6; L04 4/4; L05 1/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009473	cloud	1	intra-linhagem	L01 46/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	ABC transporter transmembrane region	ABC_membrane,ABC_tran
+OG0009480	cloud	5	intra-linhagem	L01 44/47; L02 7/7; L03 5/6; L04 4/4; L05 3/3; L07 1/1; L08 1/1; L09 1/1	Sugar (and other) transporter	Sugar_tr
+OG0009505	cloud	5	intra-linhagem	L01 43/47; L02 6/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Sugar (and other) transporter	Sugar_tr
+OG0009574	cloud	5	intra-linhagem	L01 45/47; L02 7/7; L03 5/6; L04 4/4; L05 3/3; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009577	cloud	4	intra-linhagem	L01 44/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009678	cloud	4	intra-linhagem	L01 44/47; L02 6/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Belongs to the major facilitator superfamily. Suga	Sugar_tr
+OG0009719	cloud	4	intra-linhagem	L01 43/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009762	cloud	3	intra-linhagem	L01 45/47; L02 6/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009797	cloud	3	intra-linhagem	L01 45/47; L02 7/7; L03 5/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Sugar (and other) transporter	MFS_1
+OG0009911	cloud	3	intra-linhagem	L01 45/47; L02 7/7; L03 5/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009914	cloud	3	intra-linhagem	L01 47/47; L02 6/7; L03 4/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009915	cloud	3	intra-linhagem	L01 47/47; L02 6/7; L03 5/6; L04 3/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009916	cloud	3	intra-linhagem	L01 44/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009919	cloud	2	intra-linhagem	L01 45/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009947	cloud	2	intra-linhagem	L01 47/47; L02 7/7; L03 6/6; L04 4/4; L05 1/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0009980	cloud	3	restrita por linhagem	L01 47/47; L02 7/7; L03 6/6; L04 4/4; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Belongs to the major facilitator superfamily. Suga	Sugar_tr
+OG0010023	cloud	1	intra-linhagem	L01 47/47; L02 6/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Transporter	MFS_1
+OG0010062	cloud	3	intra-linhagem	L01 45/47; L02 7/7; L03 5/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Sugar (and other) transporter	MFS_1
+OG0010093	cloud	1	restrita por linhagem	L01 47/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1	Monocarboxylate	MFS_1
+OG0010094	cloud	2	intra-linhagem	L01 45/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Sugar (and other) transporter	Sugar_tr
+OG0010160	cloud	2	intra-linhagem	L01 46/47; L02 6/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Belongs to the major facilitator superfamily. Suga	Sugar_tr
+OG0010161	cloud	2	intra-linhagem	L01 45/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Belongs to the major facilitator superfamily. Suga	Sugar_tr
+OG0010223	cloud	2	intra-linhagem	L01 47/47; L02 7/7; L03 5/6; L04 4/4; L05 3/3; L07 1/1; L08 1/1; L09 1/1	ABC transporter	ABC_tran
+OG0010231	cloud	1	intra-linhagem	L01 47/47; L02 7/7; L03 5/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	ABC transporter	ABC_membrane,ABC_tran
+OG0010332	cloud	2	intra-linhagem	L01 46/47; L02 6/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0010384	cloud	1	intra-linhagem	L01 47/47; L02 6/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major facilitator superfamily transporter	MFS_1
+OG0010388	cloud	2	intra-linhagem	L01 45/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0010390	cloud	2	intra-linhagem	L01 46/47; L02 6/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Chromo (CHRromatin Organisation MOdifier) domain	ABC_tran,Chromo
+OG0010489	cloud	1	intra-linhagem	L01 46/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Major Facilitator Superfamily	MFS_1
+OG0010492	cloud	2	intra-linhagem	L01 45/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Sugar (and other) transporter	Sugar_tr
+OG0010579	cloud	1	intra-linhagem	L01 46/47; L02 7/7; L03 6/6; L04 4/4; L05 3/3; L06 1/1; L07 1/1; L08 1/1; L09 1/1	Sugar (and other) transporter	Sugar_tr
