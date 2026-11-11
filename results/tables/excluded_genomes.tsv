@@ -1,0 +1,3 @@
+sample	reason
+SRR24215216	intra-isolate mixture (~13-15% minority genotype): bimodal ALT allele fraction at 97k HET sites (peaks 0.1-0.2 and 0.8-0.9); 227k HET sites; 197 low-coverage contigs
+SRR19142674	duplicate of SRR23217757 (CRMP2529/CMRP2529): 0 core SNPs and the same nearest neighbors; the sample with the better BUSCO score was retained (D 0.3 vs 1.0)
